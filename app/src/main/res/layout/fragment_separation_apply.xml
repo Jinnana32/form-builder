@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_back"
+            android:clickable="true"
+            android:layout_width="8dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/hrx_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_separation_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separation_apply_header"
+            android:layout_marginLeft="@dimen/grid_2"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_headline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ic_back"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_separation_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_1"
+            android:text="@string/separation_apply_subheader"
+            android:textStyle="bold"
+            android:textColor="@color/ub_black"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_separation_header"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_circle_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_separation_subheader">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/separation_upload_header"
+                android:textStyle="bold"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_upload_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separation_upload_subheader"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_small"
+            android:layout_marginRight="@dimen/lbl_margin_transaction"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btn_upload_attachment"
+            app:layout_constraintRight_toLeftOf="@+id/btn_upload_attachment"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_upload_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separation_upload_button"
+            android:textSize="@dimen/text_small"
+            style="@style/Base.UBButton.Small.Primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_circle_heading_effectivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_upload_subheader"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_separation_subheader">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/separation_effectivity"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small_body"
+                android:textColor="@color/ub_black"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_effectivity"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="@dimen/grid_1"
+            android:layout_marginRight="@dimen/grid_1"
+            android:layout_width="0dp"
+            style="@style/UBEditTextDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_effectivity"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_sep_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/et_effectivity"
+            app:layout_constraintLeft_toLeftOf="@+id/et_effectivity">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Reason"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small_body"
+                android:textColor="@color/ub_black"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView
+            android:id="@+id/et_remarks"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="@dimen/grid_1"
+            android:layout_marginRight="@dimen/grid_1"
+            android:layout_width="0dp"
+            android:hint="@string/separation_hint_remarks"
+            style="@style/UBEditTextMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sep_remarks"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.724"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_goto_survey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/grid_6"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp"
+            style="@style/Base.UBButton.Primary"
+            app:layout_constraintTop_toBottomOf="@+id/et_remarks"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

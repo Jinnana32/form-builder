@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:windowSoftInputMode="adjustResize|stateHidden"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:fitsSystemWindows="true"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:layout_editor_absoluteY="49dp"
+            tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/tv_leave_subHeader"
+                    android:layout_width="313dp"
+                    android:layout_height="31dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.09"
+            >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/leave_form_desc"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/leave_card_sub"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+                    android:padding="5dp"
+                    android:id="@+id/calendar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    custom:calendar_tag="Test"
+                    custom:disable_date_color="#ABABAB"
+                    custom:enable_past_date="true"
+                    custom:header_bg="@drawable/calendar_header"
+                    custom:range_color="@color/range_color"
+                    custom:selected_date_circle_color="@color/selected_date_circle_color_app"
+                    custom:title_color="#fff"
+                    custom:editable="true"
+                    custom:week_offset="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dateSelection_header"
+                    android:layout_marginTop="8dp">
+
+            </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/tv_time_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.062"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/calendar">
+
+                <ImageView
+                        android:layout_width="@dimen/orange_bullet_dimen"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_circle"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/subHeader_container_padding_bottom"
+                        android:paddingEnd="@dimen/subHeader_container_padding_end"
+                        android:paddingStart="@dimen/subHeader_container_padding_start"
+                        android:paddingTop="@dimen/subHeader_container_padding_top"
+                        android:contentDescription="@string/imageView_tag"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/leave_startTimeAndEndTime"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_small_body"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/tv_types_of_leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/imageView_tag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_leave_subHeader"
+                   >
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_circle"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/subHeader_container_padding_bottom"
+                        android:paddingEnd="@dimen/subHeader_container_padding_end"
+                        android:paddingTop="@dimen/subHeader_container_padding_top"
+                        android:paddingStart="@dimen/subHeader_container_padding_start"
+                        android:contentDescription="@string/imageView_tag"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/leave_types_of_leave"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_small_body"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/btn_types_of_leaves"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="7dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_types_of_leave"
+                    android:layout_marginEnd="8dp">
+
+                <com.itsgmobility.hrbenefits.ui.UBEditText
+                        android:id="@+id/et_types_of_leaves"
+                        style="?ubEditTextDropdownStyle"
+                        android:textSize="@dimen/textSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"/>
+
+            </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/uploadSupportingDocument"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/et_reason"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.078">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_circle"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/subHeader_container_padding_bottom"
+                        android:paddingEnd="@dimen/subHeader_container_padding_end"
+                        android:paddingTop="@dimen/subHeader_container_padding_top"
+                        android:paddingStart="@dimen/subHeader_container_padding_start"
+                        android:contentDescription="@string/imageView_tag"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/form_upload_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_small_body"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leave_no_file_uploaded"
+                    app:layout_constraintTop_toTopOf="@+id/btn_upload_attachment"
+                    android:textStyle="italic"
+                    android:textColor="@color/model_name_color"
+                    android:textSize="@dimen/text_small_body"
+                    android:id="@+id/appCompatTextView"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_submit_leave"
+                    android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_upload_attachment" app:layout_constraintVertical_bias="0.0"/>
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/textSize"
+                    android:id="@+id/et_startTime"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    style="?ubEditTextDateStyle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_header"
+                    app:layout_constraintEnd_toStartOf="@+id/appCompatTextView2"
+            />
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/textSize"
+                    android:id="@+id/et_endTime"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="?ubEditTextDateStyle"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView2"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_header"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leave_to"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_small_body"
+                    android:id="@+id/appCompatTextView2"
+                    app:layout_constraintStart_toEndOf="@+id/et_startTime" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/et_endTime"
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/et_startTime"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/tv_dateSelection_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_types_of_leaves"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.06"
+                    android:layout_marginTop="8dp">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_circle"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="@dimen/subHeader_container_padding_start"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="4dp"
+                        android:contentDescription="@string/imageView_tag"
+                />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/leave_leave_duratation"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_small_body"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.itsgmobility.hrbenefits.ui.UBEditTextMultiLine
+                    android:layout_width="0dp"
+                    android:layout_height="133dp"
+                    android:id="@+id/et_reason"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_remarks_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/tv_remarks_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_startTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_circle"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/subHeader_container_padding_start"
+                        android:paddingBottom="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="4dp"
+                        android:contentDescription="@string/imageView_tag"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/leave_remarks"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_small_body"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:layout_width="86dp"
+                    android:layout_height="31dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/uploadSupportingDocument"
+                    style="@style/Base.UBButton.Primary"
+                    android:text="@string/separation_upload_button"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_upload_attachment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintHorizontal_bias="0.945"/>
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    style="@style/Base.UBButton.Primary"
+                    android:text="@string/form_submit"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_upload_attachment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintHorizontal_bias="0.292"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:id="@+id/btn_submit_leave" android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="@string/leave_0_1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_char_Count"
+                    android:textSize="@dimen/char_count_textSize"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/et_reason"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

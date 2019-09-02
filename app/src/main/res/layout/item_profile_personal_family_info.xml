@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/grid_2"
+            android:background="@color/white_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hrx_x_men"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_body"
+                android:textStyle="bold"
+                android:text="Family Information Form"
+                android:layout_marginStart="@dimen/grid_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_close"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:text="Filling your family information form has never this convenient."
+                android:layout_marginTop="@dimen/grid_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_header"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_relationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Relationship"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_relationship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_relationship"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_relationship"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="First Name"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_firstname"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_middlename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_firstname"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Middle Name"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_middlename"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_middlename"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_payroll_family_info_firstname"
+                app:layout_constraintLeft_toLeftOf="@id/et_payroll_family_info_lastname">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Last Name"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_lastname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_lastname"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline11"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_suffix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_middlename"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Suffix"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_suffix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_suffix"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_payroll_family_info_lastname"
+                app:layout_constraintLeft_toLeftOf="@id/et_payroll_family_info_gender">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Gender"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_gender"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline11"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_suffix"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Birthdate"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_birthdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_marginEnd="@dimen/grid_1_half"
+                android:drawableEnd="@drawable/ic_date_range_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_birthdate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_blood_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_payroll_family_info_gender"
+                app:layout_constraintLeft_toLeftOf="@id/et_payroll_family_info_blood_type">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Blood Type"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_blood_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_blood_type"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline11"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_birthdate"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Occupation"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_payroll_family_info_occupation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_occupation"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_payroll_family_info_blood_type"
+                app:layout_constraintLeft_toLeftOf="@id/et_payroll_family_info_contact_number">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Contact Number"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/et_payroll_family_info_contact_number"
+                style="@style/UBEditText"
+                app:met_mask="(####) ### ####"
+                android:inputType="phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_contact_number"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline11"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_hmo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_payroll_family_info_occupation"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="HMO Dependent"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RadioGroup
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rdGroup_hmo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_hmo"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                android:layout_marginEnd="8dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rd_hmo_yes"
+                    android:text="Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rd_hmo_no"
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:textColor="@color/ub_black"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_payroll_family_info_insurance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_payroll_family_info_contact_number"
+                app:layout_constraintLeft_toLeftOf="@id/tv_payroll_family_info_contact_number"
+                app:layout_constraintStart_toStartOf="@+id/guideline11">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Insurance Beneficiary"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RadioGroup
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rdGroup_insurance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_payroll_family_info_insurance"
+                app:layout_constraintLeft_toLeftOf="@id/tv_payroll_family_info_insurance"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline11">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rd_insurance_yes"
+                    android:text="Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/ub_black"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rd_insurance_no"
+                    android:text="No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:textColor="@color/ub_black"
+                    style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.5"
+                android:id="@+id/guideline11"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                style="@style/UBButton.Primary"
+                android:text="Continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/rdGroup_hmo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

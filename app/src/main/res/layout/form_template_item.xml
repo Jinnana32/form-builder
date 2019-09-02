@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/l_padding"
+        android:clipToPadding="false"
+        android:elevation="0dp"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="@dimen/s_padding"
+    >
+
+        <View
+                android:id="@+id/view_border"
+                android:layout_width="5dp"
+              android:layout_height="0dp"
+              android:background="@color/md_orange_700"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_form_title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textSize="@dimen/text_title"
+                android:text="@string/dialog_remove_title"
+                android:textColor="@color/ub_black"
+                android:layout_marginStart="@dimen/s_padding"
+                app:layout_constraintLeft_toRightOf="@+id/view_border"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

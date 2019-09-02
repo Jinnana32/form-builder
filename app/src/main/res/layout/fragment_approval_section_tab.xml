@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:paddingTop="@dimen/l_padding"
+                                                   android:paddingLeft="@dimen/m_padding"
+                                                   android:paddingRight="@dimen/m_padding">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_back"
+            app:srcCompat="@drawable/hrx_back"
+            android:clickable="true"
+            android:layout_width="30dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_separation_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_approveleave"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_headline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ic_back"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_separation_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_1"
+            android:textStyle="bold"
+
+            android:textColor="@color/ub_black"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_separation_header"
+          app:layout_constraintLeft_toLeftOf="@+id/tv_separation_header"
+            android:text="Donec fringilia augue quis"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_request"
+            style="?ubButtonSmallLeftStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Pending"
+            android:textSize="@dimen/text_extra_small"
+            app:layout_constraintEnd_toStartOf="@+id/btn_history"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_history"
+            style="?ubButtonSmallRightStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Approval History"
+            android:textSize="@dimen/text_extra_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_request"
+            app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"/>
+
+    <FrameLayout
+            android:id="@+id/frame_approvals_tab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/s_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_request" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

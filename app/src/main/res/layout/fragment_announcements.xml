@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/news_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_announcement"
+    />
+
+    <include
+            android:id="@+id/news_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_announcement"
+            android:layout_marginTop="@dimen/text_small"
+    />
+
+    <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_announcement"
+            android:layout_marginTop="@dimen/text_small"
+    />
+
+    <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_announcement"
+            android:layout_marginTop="@dimen/text_small"
+    />
+
+    <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_announcement"
+            android:layout_marginTop="@dimen/text_small"
+    />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

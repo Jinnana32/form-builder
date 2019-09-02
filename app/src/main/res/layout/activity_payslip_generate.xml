@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              android:orientation="vertical"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent">
+
+
+    <include
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_toolbar_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <!-- Payslip Content -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_small"
+                android:id="@+id/tv_payslip_sub_header"
+                android:text="@string/pay_subheader"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingLeft="@dimen/m_padding"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hrx_card_bg_orange"
+                android:paddingBottom="@dimen/xxl_padding"
+                android:paddingLeft="@dimen/l_padding"
+                android:paddingRight="@dimen/l_padding"
+                android:paddingTop="@dimen/l_padding">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/rex"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:id="@+id/circleImageView3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frederex Potolin"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="@+id/circleImageView3"
+                    app:layout_constraintStart_toEndOf="@+id/circleImageView3" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:id="@+id/appCompatTextView5"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payroll card"
+                    android:textColor="@color/white_color"
+                    android:id="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView5"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Account balance"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:id="@+id/appCompatTextView3"
+                    app:layout_constraintTop_toBottomOf="@+id/circleImageView3"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="150,000.00"
+                    android:textColor="@color/white_color"
+                    android:id="@+id/appCompatTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="**** **** **** 3223"
+                    android:textColor="@color/white_color"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView"
+                    app:layout_constraintStart_toStartOf="@+id/circleImageView3"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_pay_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/work_header">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/pay_email"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_current_earning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/s_padding"
+                app:layout_constraintTop_toBottomOf="@+id/layout_current_work_sched"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:cardCornerRadius="@dimen/edit_text_radius"
+        >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/m_padding"
+            >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jamyla Dela Cruz"
+                        android:textColor="#404040"
+                />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="jdelacruz@pilmicofoods.com"
+                />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_pay_deduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/work_header">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/pay_recipient"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:visibility="gone"
+                android:id="@+id/layout_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/l_padding"
+                app:layout_constraintTop_toBottomOf="@+id/layout_requested_sched"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hrx_empty_list_medium"
+                    android:layout_marginTop="@dimen/lbl_margin_transaction"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_empty_list_title"
+                    android:layout_marginTop="@dimen/s_padding"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:text="@string/work_empty_list_message"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginTop="@dimen/s_padding"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rv_recipients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/s_padding"
+                android:paddingRight="@dimen/s_padding"
+                android:layout_marginTop="@dimen/materialize_toolbar"
+                android:layout_marginBottom="@dimen/l_padding"
+        >
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:id="@+id/btn_send_payslip"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    style="@style/UBButton.Primary"
+                    android:text="@string/pay_send_payslip"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/guideline10"
+                    android:layout_marginRight="@dimen/s_padding"
+            />
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:id="@+id/btn_manage_recipient"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    style="@style/UBButton"
+                    android:text="@string/pay_manage_recipient"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/guideline10"
+                    android:layout_marginLeft="@dimen/s_padding"
+            />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline10"
+                    app:layout_constraintGuide_percent="0.50"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!-- End Payslip Content -->
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dtr_month"
+            android:paddingStart="@dimen/s_padding"
+            android:paddingEnd="@dimen/l_padding"
+            android:paddingTop="@dimen/xxs_padding"
+            android:paddingBottom="@dimen/xxs_padding"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/model_name_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_padding"
+>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_employee_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Developer"
+                android:background="@drawable/status_reg_position"
+                android:paddingLeft="@dimen/grid_5_half"
+                android:paddingBottom="@dimen/s_padding"
+                android:paddingTop="@dimen/s_padding"
+                android:paddingRight="@dimen/grid_5_half"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_small_body"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_employeeImage"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:src="@drawable/rex"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/tv_employee_position" app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="@dimen/text_large_headline"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_employee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kap Frederex"
+                android:textSize="@dimen/text_headline"
+                android:textColor="@color/ub_black"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/iv_employeeImage"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_employee_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID No. 190004"
+                app:layout_constraintTop_toBottomOf="@+id/tv_employee_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date:"
+                android:textColor="@color/ub_black"
+                android:layout_marginTop="@dimen/l_padding"
+                android:layout_marginLeft="@dimen/l_padding"
+                app:layout_constraintTop_toBottomOf="@+id/tv_employee_id"
+                app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_employee_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_padding"
+                android:layout_marginTop="@dimen/l_padding"
+                android:text="27 Feb 2019"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_id"
+                app:layout_constraintLeft_toRightOf="@+id/tv_item_date"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textColor="@color/ub_black"
+                android:layout_marginTop="@dimen/l_padding"
+                android:layout_marginRight="@dimen/xs_padding"
+                app:layout_constraintTop_toBottomOf="@+id/tv_employee_id"
+                app:layout_constraintRight_toLeftOf="@id/tv_employee_status"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_employee_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/xl_padding"
+                android:layout_marginTop="@dimen/l_padding"
+                android:text="Regular"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_id"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <View android:layout_width="wrap_content"
+              android:layout_height="0.9dp"
+              android:background="@color/ub_border"
+              android:layout_marginTop="@dimen/s_padding"
+              app:layout_constraintTop_toBottomOf="@+id/tv_item_date"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:id="@+id/view_horizontal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_initiate_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_reg_right"
+                android:textSize="@dimen/text_small"
+                android:text="@string/reg_view_progress"
+                android:textColor="@color/tangerineOrange"
+                app:layout_constraintTop_toBottomOf="@+id/view_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

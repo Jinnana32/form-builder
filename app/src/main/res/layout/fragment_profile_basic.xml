@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/basic_info_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!--basic info-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_circle_heading_basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Basic Information"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_basic_info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_color"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_circle_heading_basic_info"
+                app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_basic_info">
+
+            <include
+                    android:id="@+id/view_basic_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_profile_view_basic_info"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--address-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_circle_heading_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@id/box_basic_info"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Address"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBButton
+                android:id="@+id/btn_add_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="?ubButtonSmallStyle"
+                android:text="@string/form_add"
+                android:layout_marginBottom="@dimen/grid_1_half"
+                android:background="@drawable/background_transparent"
+                android:drawableStart="@drawable/nav_add_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/box_address"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_address"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_1_half"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_circle_heading_address"
+                app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_address">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_profile_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_view_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/grid_1_half"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                    android:id="@+id/edit_profile_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_profile_basic_address"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--contact information-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_circle_heading_contact_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@id/box_address"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Contact Information"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_contact_info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_circle_heading_contact_info"
+                app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_contact_info">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_profile_contact_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/grid_1_half"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible">
+
+                <include
+                        android:id="@+id/view_contact_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/item_profile_view_basic_contact_info"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

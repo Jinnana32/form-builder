@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        android:padding="@dimen/grid_3">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_close_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hrx_x_men" android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_your_on_time"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_headline"
+            app:layout_constraintStart_toEndOf="@+id/img_close_info"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_your_on_time_description"
+            android:layout_marginTop="@dimen/grid_3"
+            android:textSize="@dimen/text_large_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_header"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UBButton.Primary"
+            android:layout_marginTop="@dimen/grid_10"
+            android:text="@string/form_view_okay"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

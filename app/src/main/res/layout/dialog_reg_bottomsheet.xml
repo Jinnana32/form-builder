@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/l_padding"
+            android:paddingRight="@dimen/l_padding"
+            android:paddingBottom="@dimen/l_padding"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_dialog_header"
+            android:textSize="@dimen/text_headline"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dialog_close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_sub_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_dialog_subheader"
+            android:paddingLeft="@dimen/text_headline"
+            android:paddingRight="@dimen/text_headline"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_small_body"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_employeeImage"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:src="@drawable/rex"
+
+            android:layout_marginTop="@dimen/l_padding"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_sub_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_employee_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kap Frederex"
+            android:textSize="@dimen/text_large_title"
+            android:textColor="@color/ub_black"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@+id/iv_employeeImage"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_employee_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID No. 190004"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_position"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_padding"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_id"
+            app:layout_constraintLeft_toLeftOf="parent"
+    >
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_label_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_position"
+                android:textColor="@color/ub_black"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Developer"
+
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_date"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_position"
+            app:layout_constraintLeft_toLeftOf="parent"
+    >
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_label_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_start_date"
+                android:textColor="@color/ub_black"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27 Feb 2019"
+
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_department"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_padding"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_id"
+            app:layout_constraintRight_toRightOf="parent"
+    >
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_label_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_department"
+                android:textColor="@color/ub_black"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITSG"
+
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_reg_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_padding"
+            app:layout_constraintTop_toBottomOf="@+id/layout_date"
+            app:layout_constraintLeft_toLeftOf="parent"
+    >
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_circle"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/reg_rate_employee"
+                android:textColor="@android:color/black"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rb_reg_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/layout_reg_rate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_reg_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/s_padding"
+            app:layout_constraintTop_toBottomOf="@+id/rb_reg_rating"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_circle"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp" tools:ignore="RtlSymmetry"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/reg_remarks"
+                android:textColor="@android:color/black"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_reg_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UBEditTextMultiLine"
+            android:hint="@string/reg_remarks_hint"
+            app:layout_constraintTop_toBottomOf="@id/layout_reg_remarks"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+    />
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.UBButton.Primary"
+            android:text="@string/form_continue"
+            android:layout_marginTop="@dimen/s_padding"
+            app:layout_constraintStart_toStartOf="@+id/et_reg_remarks"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/btn_continue"
+            app:layout_constraintTop_toBottomOf="@+id/et_reg_remarks"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/UBButton"
+            android:text="@string/form_back"
+            android:layout_marginTop="@dimen/s_padding"
+            android:id="@+id/btn_back"
+            app:layout_constraintTop_toBottomOf="@+id/et_reg_remarks"
+            app:layout_constraintEnd_toEndOf="@+id/et_reg_remarks"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline4"
+            app:layout_constraintGuide_percent="0.50121653"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

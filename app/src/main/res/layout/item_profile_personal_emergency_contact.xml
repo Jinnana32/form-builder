@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/grid_2"
+            android:background="@color/white_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hrx_x_men"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_body"
+                android:textStyle="bold"
+                android:text="Emergency Contact Form"
+                android:layout_marginStart="@dimen/grid_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_close"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:text="Filling your emergency contact form has never this convenient."
+                android:layout_marginTop="@dimen/grid_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_header"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Full Name"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_employee_ec_fullname"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_relationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_employee_ec_fullname"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Relationship"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_relationship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_relationship"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_home_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_employee_ec_fullname"
+                app:layout_constraintLeft_toLeftOf="@id/et_employee_ec_contact_number">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Contact Number"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/et_employee_ec_contact_number"
+                style="@style/UBEditText"
+                app:met_mask="(####) ### ####"
+                android:inputType="phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_home_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_employee_relationship"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Unit/House Number, Building, Street"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_address"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_barangay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_employee_ec_address"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Barangay"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_barangay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_barangay"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_employee_ec_barangay"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Country"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_country"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_employee_ec_barangay"
+                app:layout_constraintLeft_toLeftOf="@id/et_employee_ec_province">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Province"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_province"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline10"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_municipality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_employee_ec_country"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Municipality"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_municipality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_municipality"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_employee_ec_zip_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_employee_ec_province"
+                app:layout_constraintLeft_toLeftOf="@id/et_employee_ec_zip_code">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Zip Code"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_employee_ec_zip_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_employee_ec_zip_code"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline10"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_present_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/ub_black"
+                android:text="Same as Present Address"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_employee_ec_municipality"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline10" app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                style="@style/UBButton.Primary"
+                android:text="Continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/cb_present_address"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

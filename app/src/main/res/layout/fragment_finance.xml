@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingTop="@dimen/l_padding"
+        android:paddingLeft="@dimen/m_padding"
+        android:paddingRight="@dimen/m_padding"
+>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_finance_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finance_header"
+            android:textSize="@dimen/text_headline"
+            android:textColor="@color/hrx_activity_header"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_finance_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finance_subheader"
+            android:textSize="@dimen/text_small_body"
+            android:textColor="@color/hrx_activity_sub_header"
+            app:layout_constraintTop_toBottomOf="@+id/tv_finance_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_finance_subheader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp" android:id="@+id/linearLayoutCompat2">
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_reimbursement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finance_app_reimbursement"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_payslip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finance_view_payslip"
+                android:layout_marginTop="16dp"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finance_micro_pension"
+                android:layout_marginTop="16dp"
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_finance_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
+            app:layout_constraintLeft_toLeftOf="@id/tv_user_name"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat2"
+            android:layout_marginLeft="0dp" android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_circle"
+                android:layout_weight="1" android:paddingBottom="4dp" android:paddingRight="4dp"
+                android:paddingTop="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/finance_avail_product"
+                android:textColor="@android:color/black"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/layout_finance_middle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp" android:id="@+id/layout_finance_bottom">
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finance_credit_card"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finance_loans"
+                android:layout_marginTop="16dp"
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

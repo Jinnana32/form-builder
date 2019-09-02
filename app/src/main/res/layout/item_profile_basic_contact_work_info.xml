@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:padding="@dimen/grid_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hrx_x_men"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small_body"
+            android:textStyle="bold"
+            android:text="Work Contact Information Form"
+            android:layout_marginStart="@dimen/grid_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_close"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small"
+            android:text="Filling your contact information form has never this convenient."
+            android:layout_marginTop="@dimen/grid_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_header"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tv_employee_work_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Work Mobile Number"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.santalu.maskedittext.MaskEditText
+            android:id="@+id/et_employee_work_mobile_number"
+            style="@style/UBEditText"
+            app:met_mask="(####) ### ####"
+            android:inputType="phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="@dimen/grid_1_half"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_work_mobile_number"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tv_employee_work_landline_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_subheader"
+            app:layout_constraintLeft_toLeftOf="@id/et_employee_work_landline_number">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_home_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Work Landline"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.santalu.maskedittext.MaskEditText
+            android:id="@+id/et_employee_work_landline_number"
+            style="@style/UBEditText"
+            app:met_mask="## ### #### ####"
+            android:inputType="phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            android:layout_marginStart="@dimen/grid_1_half"
+            app:layout_constraintTop_toBottomOf="@+id/tv_employee_work_landline_number"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tv_employee_work_email_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/et_employee_work_mobile_number"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_employeeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Work Email Address"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.itsgmobility.hrbenefits.ui.UBEditText
+            android:id="@+id/et_employee_work_email_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_employee_work_email_add"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline9"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            style="@style/UBButton.Primary"
+            android:text="Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/et_employee_work_email_add"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

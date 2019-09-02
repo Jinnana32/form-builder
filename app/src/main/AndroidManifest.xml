@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:targetSandboxVersion="1"
+          package="com.unionbankph.hrxmobility" tools:targetApi="o">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission
+            android:name="android.permission.INTERACT_ACROSS_USERS"
+            tools:ignore="ProtectedPermissions"/>
+
+    <application
+            android:name=".presentation.HrxApplication"
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:icon="@drawable/hrx_app_logo"
+            android:roundIcon="@drawable/hrx_app_logo"
+            android:supportsRtl="true"
+            android:usesCleartextTraffic="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+            tools:replace="android:icon" tools:targetApi="n">
+
+        <activity android:name=".presentation.view.generic.login.FormActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.view.generic.form.FormDetailActivity"/>
+
+
+    </application>
+
+</manifest>

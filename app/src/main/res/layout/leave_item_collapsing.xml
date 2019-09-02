@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.daimajia.swipe.SwipeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/swipe"
+        app:leftEdgeSwipeOffset="0dp"
+        app:rightEdgeSwipeOffset="0dp"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+            android:id="@+id/bottom_wraper"
+            android:layout_width="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="75dp"
+                android:id="@+id/btn_cancel"
+                android:layout_height="75dp"
+                 android:layout_marginTop="10px"
+                android:padding="10dp"
+                android:src="@drawable/trashtrash"/>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+
+
+
+                                                       android:layout_marginBottom="10dp" android:id="@+id/card">
+
+
+    <com.unionbankph.hrxmobility.presentation.components.ExpandableCardView
+            android:id="@+id/leave_item"
+            android:layout_height="wrap_content"
+
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:inner_view="@layout/leave_remark_extension"
+            app:expandOnClick="true"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.daimajia.swipe.SwipeLayout>

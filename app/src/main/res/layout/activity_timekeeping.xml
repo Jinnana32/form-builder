@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+  <include
+          layout="@layout/layout_toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:id="@+id/include"/>
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+          android:id="@+id/iv_time_image"
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintHorizontal_bias="0.498"
+          app:layout_constraintTop_toBottomOf="@+id/include"
+          android:layout_marginTop="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_temp_initials"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="adwadadadadadadaw"
+            android:textColor="@color/ub_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_time_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/iv_time_image"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginTop="@dimen/text_body"
+          android:textSize="@dimen/text_large_body"
+          android:textStyle="bold"
+          android:textColor="@color/hrx_activity_header"
+  />
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_time_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:textSize="@dimen/text_large_body"
+          android:textColor="@color/hrx_activity_sub_header"
+          app:layout_constraintTop_toBottomOf="@+id/tv_curr_time"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_curr_time"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_banner"
+          android:textColor="@color/hrx_field_header"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tv_time_name" android:layout_marginTop="16dp"
+          android:textAlignment="viewEnd" android:layout_marginEnd="16dp"
+          app:layout_constraintEnd_toEndOf="@+id/tv_time_date" tools:text="adwda"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_time_zone"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_body"
+          android:textColor="@color/ub_black"
+          android:layout_marginBottom="16dp"
+          app:layout_constraintBottom_toBottomOf="@+id/tv_curr_time"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/tv_curr_time"
+          android:layout_marginStart="8dp" tools:text="dawd"/>
+
+  <androidx.constraintlayout.widget.Guideline
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintGuide_begin="261dp"
+          android:id="@+id/guideline9"/>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/layout_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/tv_time_date"
+          app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="80dp">
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_time_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_btn_out"
+            android:visibility="visible"
+            style="@style/UBButton"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_time_in"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time_btn_in"
+            android:visibility="visible"
+            style="@style/Base.UBButton.Primary"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline18"
+            app:layout_constraintGuide_percent="0.5"/>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <com.itsgmobility.hrbenefits.ui.UBListButton
+          android:id="@+id/btn_check_record"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:text="@string/time_check_record"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginLeft="16dp" android:layout_marginRight="16dp"
+          android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/layout_button"
+          app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.145"/>
+
+  <androidx.constraintlayout.widget.Guideline
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" app:layout_constraintGuide_begin="212dp" android:id="@+id/guideline14"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_toolbar_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <!-- Payslip Content -->
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:paddingTop="@dimen/l_padding"
+                android:paddingLeft="@dimen/m_padding"
+                android:paddingRight="@dimen/m_padding"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/materialize_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small"
+                    android:id="@+id/tv_payslip_sub_header"
+                    android:text="@string/pay_subheader"
+                    app:layout_constraintTop_toBottomOf="@+id/circleImageView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingStart="@dimen/m_padding"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hrx_card_bg_orange"
+                    android:paddingBottom="@dimen/xxl_padding"
+                    android:paddingLeft="@dimen/l_padding"
+                    android:paddingRight="@dimen/l_padding"
+                    android:paddingTop="@dimen/l_padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/rex"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" android:id="@+id/circleImageView3"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payslip_frederex_potolin"
+                        android:textColor="@color/white_color"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="@+id/circleImageView3"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView3" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" android:id="@+id/appCompatTextView5"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payslip_payroll_card"
+                        android:textColor="@color/white_color"
+                        android:id="@+id/appCompatTextView4"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView5"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="@string/payslip_account_balance"
+                        android:textColor="@color/white_color"
+                        android:textStyle="bold"
+                        android:id="@+id/appCompatTextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/circleImageView3"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payslip_150_000_00"
+                        android:textColor="@color/white_color"
+                        android:id="@+id/appCompatTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payslip_3223"
+                        android:textColor="@color/white_color"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView"
+                        app:layout_constraintStart_toStartOf="@+id/circleImageView3"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_choose_shift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="4dp"
+                        app:srcCompat="@drawable/ic_circle"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/pay_cut_off"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/snackbar_color"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                    android:id="@+id/layout_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s_padding"
+                    app:layout_constraintTop_toBottomOf="@+id/coe_title">
+
+                <com.itsgmobility.hrbenefits.ui.UBEditText
+                        android:id="@+id/et_cut_off"
+                        style="?ubEditTextDropdownStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_pay_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/work_header">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="4dp"
+                        app:srcCompat="@drawable/ic_circle"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/pay_head_earning"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/snackbar_color"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_current_earning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/s_padding"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_current_work_sched"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:cardCornerRadius="@dimen/edit_text_radius">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/m_padding">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_basic_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_basic_pay"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_overtime_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_basic_pay"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_overtime_pay"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_meal_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_overtime_pay"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_meal_transportation_allowance"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_night_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_meal_pay"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_night_premium"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_gross_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/s_padding"
+                            app:layout_constraintTop_toBottomOf="@id/tv_night_pay"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_gross_pay"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_basic_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_basic_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_15_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_overtime_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_overtime_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_2_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_meal_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_meal_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_400"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_night_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_night_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_1_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_gross_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_gross_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_10_000"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/text_small"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_pay_deduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/work_header">
+
+                <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="4dp"
+                        app:srcCompat="@drawable/ic_circle"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:layout_marginBottom="@dimen/s_padding"
+                        android:text="@string/pay_deductions"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/snackbar_color"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_current_deducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/s_padding"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_current_work_sched"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:cardCornerRadius="@dimen/edit_text_radius">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/m_padding">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_with_tax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_withholding_tax"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_leave_without_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_with_tax"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_leave_withou_pay"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_tardy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_leave_without_pay"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_tardy_undertime"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_sub_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_tardy"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_sub_total"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_net_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/s_padding"
+                            app:layout_constraintTop_toBottomOf="@id/tv_sub_total"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:text="@string/payslip_net_pay"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_with_tax_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_with_tax"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_15_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_leave_without_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_leave_without_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_2_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_tardy_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_tardy"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_400"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_sub_total_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_sub_total"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_1_000"
+                            android:textColor="@color/gray1"
+                            android:textSize="@dimen/text_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_net_pay_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@id/tv_net_pay"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="@string/payslip_10_000"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/text_small"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:id="@+id/btn_payslip_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/pay_generate"
+                    style="@style/Base.UBButton.Primary"
+                    app:layout_constraintTop_toBottomOf="@id/layout_empty_list"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+    <!-- End Payslip Content -->
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

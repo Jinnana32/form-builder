@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.AppTheme" />
+
+
+    <!-- Base application theme. -->
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/hrx_background_image</item>
+
+        <item name="ubButtonStyle">@style/UBButton</item>
+
+        <item name="ubButtonLeftStyle">@style/UBButton.Left</item>
+        <item name="ubButtonMiddleStyle">@style/UBButton.Middle</item>
+        <item name="ubButtonRightStyle">@style/UBButton.Right</item>
+
+        <item name="ubButtonPrimaryStyle">@style/UBButton.Primary</item>
+
+        <item name="ubButtonLeftPrimaryStyle">@style/UBButton.Left.Primary</item>
+        <item name="ubButtonMiddlePrimaryStyle">@style/UBButton.Middle.Primary</item>
+        <item name="ubButtonRightPrimaryStyle">@style/UBButton.Right.Primary</item>
+
+        <item name="ubButtonSmallStyle">@style/UBButton.Small</item>
+
+        <item name="ubButtonSmallLeftStyle">@style/UBButton.Left.Small</item>
+        <item name="ubButtonSmallMiddleStyle">@style/UBButton.Middle.Small</item>
+        <item name="ubButtonSmallRightStyle">@style/UBButton.Right.Small</item>
+
+        <item name="ubButtonSmallPrimaryStyle">@style/UBButton.Small.Primary</item>
+
+        <item name="ubButtonLeftSmallPrimaryStyle">@style/UBButton.Left.Small.Primary</item>
+        <item name="ubButtonMiddleSmallPrimaryStyle">@style/UBButton.Middle.Small.Primary</item>
+        <item name="ubButtonRightSmallPrimaryStyle">@style/UBButton.Right.Small.Primary</item>
+
+        <item name="listButtonStyle">@style/ListButton</item>
+        <item name="ubEditTextStyle">@style/UBEditText</item>
+        <item name="ubEditTextMultiLineStyle">@style/UBEditTextMultiLine</item>
+        <item name="ubListViewStyle">@style/UBListView</item>
+
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="actionMenuTextColor">@android:color/black</item>
+    </style>
+
+    <style name="ToolbarTheme.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_headline</item>
+    </style>
+
+    <style name="ExpandedLibraryDetailToolbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CollapsedLibraryDetailToolbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="android:Theme.Dialog">
+        <!-- Fill the screen -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- Just to prove it's working -->
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="ImageDetailStyle" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- UBButton -->
+    <style name="Base.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingLeft">@dimen/m_padding</item>
+        <item name="android:paddingRight">@dimen/m_padding</item>
+        <item name="android:background">@drawable/ub_button_bg</item>
+        <item name="android:minWidth">@dimen/button_width</item>
+    </style>
+
+    <style name="UBButton.Left" parent="UBButton">
+        <item name="android:background">@drawable/ub_button_left_bg</item>
+    </style>
+
+    <style name="UBButton.Middle" parent="UBButton">
+        <item name="android:background">@drawable/ub_button_middle_bg</item>
+    </style>
+
+    <style name="UBButton.Right" parent="UBButton">
+        <item name="android:background">@drawable/ub_button_right_bg</item>
+    </style>
+
+    <style name="UBButton.Left.Small" parent="UBButton.Small">
+        <item name="android:background">@drawable/ub_button_left_bg</item>
+    </style>
+
+    <style name="UBButton.Middle.Small" parent="UBButton.Small">
+        <item name="android:background">@drawable/ub_button_middle_bg</item>
+    </style>
+
+    <style name="UBButton.Right.Small" parent="UBButton.Small">
+        <item name="android:background">@drawable/ub_button_right_bg</item>
+    </style>
+
+    <style name="UBButton.Primary" parent="Base.UBButton.Primary" />
+
+    <style name="UBButton.Left.Primary" parent="UBButton.Primary">
+        <item name="android:background">@drawable/ub_button_left_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Middle.Primary" parent="UBButton.Primary">
+        <item name="android:background">@drawable/ub_button_middle_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Right.Primary" parent="UBButton.Primary">
+        <item name="android:background">@drawable/ub_button_right_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Left.Small.Primary" parent="UBButton.Small.Primary">
+        <item name="android:background">@drawable/ub_button_left_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Middle.Small.Primary" parent="UBButton.Small.Primary">
+        <item name="android:background">@drawable/ub_button_middle_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Right.Small.Primary" parent="UBButton.Small.Primary">
+        <item name="android:background">@drawable/ub_button_right_primary_bg</item>
+    </style>
+
+    <style name="Base.UBButton.Primary" parent="Base.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/ub_button_primary_bg</item>
+    </style>
+
+    <style name="UBButton.Small" parent="Base.UBButton.Small" />
+
+    <style name="Base.UBButton.Small" parent="Base.Button">
+        <item name="android:minHeight">@dimen/button_small_height</item>
+        <item name="android:minWidth">@dimen/button_small_width</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="UBButton.Small.Primary" parent="Base.UBButton.Small.Primary" />
+
+    <style name="Base.UBButton.Small.Primary" parent="Base.UBButton.Primary">
+        <item name="android:minHeight">@dimen/button_small_height</item>
+        <item name="android:minWidth">@dimen/button_small_width</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="UBButton" parent="Base.Button" />
+
+    <!-- UBListButton -->
+    <style name="ListButton" parent="UBButton">
+        <item name="android:minHeight">@dimen/list_button_height</item>
+        <item name="android:textSize">@dimen/text_small_body</item>
+        <item name="android:textColor">@color/ub_black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <!-- UBListView -->
+    <style name="UBListView" parent="Base.UBListView" />
+
+    <style name="Base.UBListView" parent="Base.AppTheme">
+        <item name="android:background">@drawable/ub_button_bg</item>
+        <item name="android:textSize">@dimen/text_small_body</item>
+        <item name="android:textColor">@color/ub_black</item>
+    </style>
+
+    <!--UBEditText-->
+    <style name="Base.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ub_edit_text_bg</item>
+        <item name="android:paddingLeft">@dimen/m_padding</item>
+        <item name="android:paddingRight">@dimen/m_padding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:minHeight">@dimen/edit_text_height</item>
+        <item name="android:textCursorDrawable">@color/colorAccent</item>
+    </style>
+
+    <style name="UBEditText" parent="Base.EditText" />
+
+    <!-- UBEditTextMultiLine -->
+    <style name="Base.EditTextMultiLine" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ub_edit_text_bg</item>
+        <item name="android:padding">@dimen/m_padding</item>
+        <item name="android:inputType">text|textMultiLine</item>
+        <item name="android:gravity">top</item>
+        <item name="android:lines">5</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:minHeight">@dimen/edit_text_height</item>
+        <item name="android:textCursorDrawable">@color/colorAccent</item>
+    </style>
+
+    <style name="UBEditTextMultiLine" parent="Base.EditTextMultiLine" />
+
+</resources>

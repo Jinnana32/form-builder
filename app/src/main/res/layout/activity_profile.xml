@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/profile_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_orange"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll">
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            app:layout_collapseParallaxMultiplier="@android:integer/config_shortAnimTime">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/ic_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/grid_2"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_back"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/ic_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ic_settings"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:paddingTop="@dimen/info_padding"
+                        android:paddingLeft="@dimen/grid_2"
+                        android:paddingRight="@dimen/grid_1"
+                        android:paddingBottom="@dimen/grid_2"
+                        android:src="@drawable/info_button"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/ic_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:paddingTop="@dimen/grid_2"
+                        android:paddingLeft="@dimen/grid_1"
+                        android:paddingRight="@dimen/grid_2"
+                        android:paddingBottom="@dimen/grid_2"
+                        android:src="@drawable/settings"
+                        android:layout_alignParentEnd="true"/>
+
+                <FrameLayout
+                        android:id="@+id/user_frame"
+                        android:layout_width="97dp"
+                        android:layout_height="90dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/grid_3"
+                        android:layout_marginLeft="@dimen/grid_2"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:layout_marginBottom="@dimen/grid_1">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_employeeImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rex"
+                            android:layout_gravity="center"/>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/btn_change_picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/change_photo"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="@dimen/grid_1_half"
+                            android:layout_gravity="bottom|right"/>
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_employeeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/user_frame"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/text_large_body"
+                        android:text="..."/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_employeePosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/tv_employeeName"
+                        android:textColor="@color/white_color"
+                        android:layout_marginBottom="@dimen/grid_2"/>
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_personal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Basic"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/text_extra_small"
+            style="?ubButtonSmallLeftStyle"
+            app:layout_constraintEnd_toStartOf="@+id/btn_work"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_header"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_work"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Work"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/text_extra_small"
+            style="?ubButtonSmallMiddleStyle"
+            app:layout_constraintEnd_toStartOf="@+id/btn_payroll"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_personal"
+            app:layout_constraintTop_toBottomOf="@+id/profile_header"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_payroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Personal"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/text_extra_small"
+            style="?ubButtonSmallMiddleStyle"
+            app:layout_constraintEnd_toStartOf="@+id/btn_records"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_work"
+            app:layout_constraintTop_toBottomOf="@+id/profile_header"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+            android:id="@+id/btn_records"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/grid_3"
+            android:padding="@dimen/xxs_padding"
+            android:text="Records"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/text_extra_small"
+            style="?ubButtonSmallRightStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_payroll"
+            app:layout_constraintTop_toBottomOf="@+id/profile_header"/>
+
+    <FrameLayout
+            android:id="@+id/frame_profile_tab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/s_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_personal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

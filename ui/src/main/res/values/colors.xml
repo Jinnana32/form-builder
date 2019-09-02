@@ -1,0 +1,61 @@
+<resources>
+    <color name="colorPrimary">#203864</color>
+    <color name="colorPrimaryDark">#203864</color>
+    <color name="colorAccent">#F57002</color>
+    <color name="tangerineOrange">#fda40a</color>
+
+    <color name="tangerineOrangeDark">#F57C00</color>
+    <color name="colorDivider">#E5E5E5</color>
+    <color name="lightGray">#E0E0E0</color>
+    <color name="md_green_200">#A5D6A7</color>
+    <color name="md_green_500">#4CAF50</color>
+    <color name="md_red_200">#EF9A9A</color>
+    <color name="md_red_500">#F44336</color>
+    <color name="md_blue_500">#2196F3</color>
+    <color name="materialRed400">#fe6869</color>
+    <color name="materialBlue400">#64bfec</color>
+    <color name="materialLightBlue400">#97c8f0</color>
+    <color name="materialGreen400">#66BB6A</color>
+    <color name="materialOrange400">#ff814e</color>
+    <color name="materialBrown">#795548</color>
+    <color name="materialDeepPurple400">#7E57C2</color>
+    <color name="materialYellow400">#fcd790</color>
+    <color name="tint">#55000000</color>
+    <color name="snackbar_color">#323232</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="ub_border">#E6E6E6</color>
+    <color name="ub_background">#F2F5F6</color>
+    <color name="ub_black">#4b4b4d</color>
+    <color name="model_name_color">#727572</color>
+
+
+    <color name="gray1">#ccc</color>
+
+
+
+
+
+    <color name="selected_date_circle_color_app">#FCA930</color>
+    <color name="range_color">#5EFF9800</color>
+
+    <!-- HRX COLORS -->
+    <color name="hrx_primary">#fda40a</color>
+    <color name="hrx_activity_header">#4b4b4d</color>
+    <color name="hrx_activity_sub_header">#49494b</color>
+    <color name="hrx_field_header">#535353</color>
+    <color name="hrx_field_sub_header">#5b5b5b</color>
+    <color name="hrx_title_header">#a4a4a4</color>
+
+    <color name="hrx_month_name">#fea30a</color>
+
+
+    <!-- Approval colors -->
+    <color name = "approval_leave">#7dd224</color>
+    <color name = "approval_worksched">#8b18ef</color>
+    <color name = "approval_separation">#50e2c3</color>
+    <color name = "approval_transfer">#ce0219</color>
+    <color name = "approval_promotion">#a698bd</color>
+    <color name = "approval_regularization">#4d8de0</color>
+
+
+</resources>

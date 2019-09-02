@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_form_summary_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/form_summary_message"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+        android:id="@+id/btn_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/s_padding"
+        android:layout_marginEnd="@dimen/s_padding"
+        android:layout_marginRight="@dimen/s_padding"
+        android:drawableStart="@drawable/ic_mode_edit_grey_500_18dp"
+        android:drawableLeft="@drawable/ic_mode_edit_grey_500_18dp"
+        android:text="@string/form_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_submit_leave"
+        app:layout_constraintTop_toBottomOf="@+id/tv_form_summary_message" />
+
+    <com.itsgmobility.hrbenefits.ui.UBButton
+        android:id="@+id/btn_submit_leave"
+        style="?ubButtonPrimaryStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/s_padding"
+        android:text="@string/form_submit"
+        app:layout_constraintLeft_toRightOf="@+id/btn_edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_form_summary_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

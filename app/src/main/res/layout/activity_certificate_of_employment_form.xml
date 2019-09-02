@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hrx_coe_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding">
+
+        <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                android:id="@+id/layout_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                app:headerTitle="@string/certificate_of_employment_form_type"
+                app:layout_constraintTop_toBottomOf="@+id/coe_title">
+
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:id="@+id/et_leave_types"
+                    style="?ubEditTextDropdownStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                android:id="@+id/layout_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                app:headerTitle="@string/certificate_of_employment_form_purpose"
+                app:layout_constraintTop_toBottomOf="@+id/layout_type">
+
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:id="@+id/et_purpose"
+                    style="?ubEditTextDropdownStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                android:id="@+id/layout_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                android:visibility="gone"
+                app:headerTitle="@string/certificate_of_employment_form_country"
+                app:layout_constraintTop_toBottomOf="@+id/layout_purpose">
+
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:id="@+id/et_country"
+                    style="?ubEditTextDropdownStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_approve_leaves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/s_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.578"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_country"
+                app:layout_constraintVertical_bias="0.4">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_approved_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/form_approved_leaves"
+                    android:textSize="@dimen/text_body"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                    android:id="@+id/layout_leave_from_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/s_padding"
+                    app:headerTitle="@string/form_from_date"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_leave_to_date"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_approved_leave"
+                    android:layout_marginEnd="@dimen/s_padding">
+
+                <com.itsgmobility.hrbenefits.ui.UBEditText
+                        android:id="@+id/et_leave_from_date"
+                        style="?ubEditTextDateStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+            </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+            <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                    android:id="@+id/layout_leave_to_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:headerTitle="@string/form_to_date"
+                    app:layout_constraintLeft_toRightOf="@+id/layout_leave_from_date"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/layout_leave_from_date">
+
+                <com.itsgmobility.hrbenefits.ui.UBEditText
+                        android:id="@+id/et_leave_to_date"
+                        style="?ubEditTextDateStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+            </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

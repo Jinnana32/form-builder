@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/grid_2"
+            android:background="@color/white_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hrx_x_men"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_body"
+                android:textStyle="bold"
+                android:text="Licenses/Certifications Form"
+                android:layout_marginStart="@dimen/grid_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_close"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:text="Filling your licenses or certification form has never this convenient."
+                android:layout_marginTop="@dimen/grid_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_header"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Type"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_type"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lc_type"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_type"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Title"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lc_title"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_title"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Certificate/License #"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_lc_title"
+                app:layout_constraintLeft_toLeftOf="@id/et_lc_issued">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Country"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_country"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_issued_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_number"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Issued By"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_issued_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_issued_by"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_expiration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_issued_by"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Expiration Date"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_expiration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_date_range_primary_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lc_expiration"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_issued"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_lc_issued_by"
+                app:layout_constraintLeft_toLeftOf="@id/et_lc_country">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Issued Date"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_issued"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_date_range_primary_24dp"
+                android:editable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_issued"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline16"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_expiration"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Start Date"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_date_range_primary_24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_start"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                android:layout_marginEnd="@dimen/grid_1_half"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tv_lc_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@id/et_lc_issued"
+                app:layout_constraintLeft_toLeftOf="@id/et_lc_end">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="End Date"
+                    android:textSize="@dimen/text_small_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_lc_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_date_range_primary_24dp"
+                android:editable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_lc_end"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline16"
+                android:layout_marginStart="@dimen/grid_1_half"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline16" app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                style="@style/UBButton.Primary"
+                android:text="Continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toBottomOf="@+id/et_lc_start"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

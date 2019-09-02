@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/l_padding"
+            android:paddingRight="@dimen/l_padding"
+            android:orientation="vertical"
+    >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/work_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_padding">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_back"
+                    android:clickable="true"
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    app:srcCompat="@drawable/hrx_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_separation_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_header"
+                    android:layout_marginLeft="@dimen/grid_2"
+                    android:textColor="@color/snackbar_color"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_headline"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_choose_sched"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/work_choose_sched"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Sunday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Monday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Tuesday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Wednesday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Thursday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Friday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:text="Saturday"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_choose_shift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/work_choose_shift"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_leave_types"
+                style="?ubEditTextDropdownStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_eff_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/work_effective_date"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_effectivity"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="@dimen/grid_1"
+                android:layout_marginRight="@dimen/grid_1"
+                android:layout_width="match_parent"
+                style="@style/UBEditTextDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_effectivity"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/work_header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/work_remarks"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_remarks_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100/100"
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:paddingRight="@dimen/s_padding"
+                android:paddingEnd="@dimen/s_padding"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_reg_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/UBEditTextMultiLine"
+                android:hint="@string/reg_remarks_hint"
+                app:layout_constraintTop_toBottomOf="@id/layout_reg_remarks"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+        <com.itsgmobility.hrbenefits.ui.UBButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/work_submit_request"
+                style="@style/Base.UBButton.Primary"
+                app:layout_constraintTop_toBottomOf="@id/layout_empty_list"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/btn_submit_request"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

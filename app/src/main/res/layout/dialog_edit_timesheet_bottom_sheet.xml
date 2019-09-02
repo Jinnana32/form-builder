@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        android:padding="@dimen/grid_3">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_remarks_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100/100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAlignment="viewEnd"
+            app:layout_constraintHorizontal_bias="0.666"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader2"
+            android:layout_marginEnd="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_reg_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UBEditTextMultiLine"
+            android:hint="@string/reg_remarks_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_remarks_count"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_subheader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before submitting this request for your line manager’s approval, kindly tell us the reason why you’re changing the details of your DTR"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/et_time_out"
+            android:layout_marginTop="24dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_close_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hrx_x_men"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_edit_header"
+            android:textColor="@color/ub_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_body"
+            android:layout_marginStart="@dimen/grid_1"
+            app:layout_constraintStart_toEndOf="@+id/img_close_info"
+            app:layout_constraintBottom_toBottomOf="@+id/img_close_info" android:layout_marginLeft="@dimen/grid_1"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_edit_subheader"
+            android:layout_marginTop="@dimen/grid_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_header"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_circle_time_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_separation_subheader">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Time In"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_time_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current time in 04:30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_circle_time_in"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_time_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current time in 04:30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_circle_time_out"/>
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_time_in"
+            android:layout_width="match_parent"
+            style="@style/UBEditTextTime"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_time_in" tools:layout_editor_absoluteX="24dp"
+            android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_circle_time_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2"
+            app:layout_constraintTop_toBottomOf="@+id/et_time_in"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_separation_subheader">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="Time Out"
+                android:textSize="@dimen/text_small_body"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_time_out"
+            android:layout_width="match_parent"
+            style="@style/UBEditTextTime"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_time_out" tools:layout_editor_absoluteX="24dp"
+            android:layout_marginTop="8dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UBButton.Primary"
+            android:text="@string/time_save_edit"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/et_reg_remarks"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

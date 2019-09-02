@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/pay_manage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                layout="@layout/layout_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="@dimen/l_padding"
+                android:paddingLeft="@dimen/m_padding"
+                android:paddingRight="@dimen/m_padding"
+        >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_back"
+                    android:clickable="true"
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/hrx_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_separation_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_manage_recipient"
+                    android:layout_marginLeft="@dimen/grid_2"
+                    android:textColor="@color/ub_black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_headline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ic_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_separation_subheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:text="@string/pay_sub_header"
+                    android:textStyle="bold"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_separation_header"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:id="@+id/btn_favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="@dimen/grid_3"
+                    android:text="@string/pay_tab_favorites"
+                    android:textSize="@dimen/text_extra_small"
+                    style="?ubButtonLeftPrimaryStyle"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_recipients"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"/>
+
+            <com.itsgmobility.hrbenefits.ui.UBButton
+                    android:id="@+id/btn_recipients"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="@dimen/grid_3"
+                    android:text="@string/pay_tab_recipients"
+                    android:textSize="@dimen/text_extra_small"
+                    style="?ubButtonRightStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/btn_favorite"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"/>
+
+            <FrameLayout
+                    android:id="@+id/frame_recipients"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="70dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_recipients" android:layout_marginTop="16dp"
+                    tools:layout_editor_absoluteX="15dp" android:paddingLeft="8dp" android:paddingRight="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add_recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:backgroundTint="@color/tangerineOrange"
+            android:layout_marginRight="@dimen/l_padding"
+            android:layout_marginBottom="@dimen/materialize_toolbar"
+            android:src="@drawable/plusicon"
+            android:layout_gravity="bottom|end"
+            app:layout_anchor="@id/pay_manage"
+            app:layout_anchorGravity="bottom|right|end"
+    />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

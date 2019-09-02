@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/grid_1_half"
+        android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_job_history"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_edit_job_history"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/edit"
+                android:paddingRight="@dimen/grid_1"
+                android:paddingLeft="@dimen/grid_1"
+                android:paddingTop="@dimen/grid_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/grid_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="Associate Designer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/grid_1_half"
+                    android:textSize="@dimen/text_small"
+                    android:text="Position"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_position"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="Kestrel IMC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_position"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:text="Company Name"
+                    android:paddingBottom="@dimen/grid_1_half"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_company_name"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_job_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="April 2017 - June 2018"
+                    android:textColor="@color/ub_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_company_name"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_job_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:text="Duration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_job_duration"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+            android:id="@+id/edit_work_job_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_profile_work_job_history"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

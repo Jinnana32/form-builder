@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/grid_1_half"
+        android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_license_certifications"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_edit_license_certificate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/edit"
+                android:paddingRight="@dimen/grid_1"
+                android:paddingLeft="@dimen/grid_1"
+                android:paddingTop="@dimen/grid_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/grid_2"
+                android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_license_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="Professional Scrum Master 1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_license_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/grid_1_half"
+                    android:textSize="@dimen/text_small"
+                    android:text="Language"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_license_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_issued_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="YYYY/MM/DD"
+                    android:layout_marginTop="@dimen/grid_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_license_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_issued_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:text="Issued Date"
+                    android:paddingBottom="@dimen/grid_1_half"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_issued_date"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_cl_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_small_body"
+                    android:text="1234567"
+                    android:layout_marginTop="@dimen/grid_2"
+                    app:layout_constraintStart_toStartOf="@id/guideline_license"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_license_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_cl_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:text="Certificate/License Number"
+                    android:paddingBottom="@dimen/grid_1_half"
+                    app:layout_constraintStart_toStartOf="@id/guideline_license"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_issued_date"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline_license" app:layout_constraintGuide_percent="0.5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+            android:id="@+id/edit_license_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_profile_work_license_certification"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

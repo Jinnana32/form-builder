@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_finance_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textSize="@dimen/text_headline"
+            android:textColor="@color/hrx_activity_header"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_finance_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finance_subheader"
+            android:textSize="@dimen/text_small_body"
+            android:textColor="@color/hrx_activity_sub_header"
+            app:layout_constraintTop_toBottomOf="@+id/tv_finance_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_finance_subheader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp" android:id="@+id/layout_more_common">
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_more_coe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Request for My Certificate of Employment"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_more_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avail bonuses"
+                android:layout_marginTop="16dp"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_more_separation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Request Separation"
+                android:layout_marginTop="16dp"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FAQs"
+                android:layout_marginTop="16dp"
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_more_linemanager"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/xxl_padding"
+            app:layout_constraintTop_toBottomOf="@+id/layout_more_common"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp" android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_circle"
+                    android:layout_weight="1" android:paddingBottom="4dp" android:paddingRight="4dp"
+                    android:paddingTop="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/line_more_manager"
+                    android:textColor="@android:color/black"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!-- Line Manager options -->
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_initiate_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Initiate regularization"
+                android:layout_marginTop="16dp"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_initiate_promotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Initiate Promotion"
+                android:layout_marginTop="16dp"
+        />
+
+        <com.itsgmobility.hrbenefits.ui.UBListButton
+                android:id="@+id/btn_initiate_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Initiate Transfer"
+                android:layout_marginTop="16dp"
+        />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

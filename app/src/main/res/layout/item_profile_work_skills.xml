@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/grid_2"
+        android:background="@color/white_color">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hrx_x_men"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small_body"
+            android:textStyle="bold"
+            android:text="@string/skill_form_header"
+            android:layout_marginStart="@dimen/grid_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_close"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small"
+            android:text="@string/skill_form_subheader"
+            android:layout_marginTop="@dimen/grid_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_header"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.itsgmobility.hrbenefits.ui.UBEditText
+            android:id="@+id/et_employee_work_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/grid_1_half"
+            android:layout_marginTop="@dimen/grid_2"
+            android:textSize="@dimen/text_small"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_down_primary_24dp"
+            android:editable="false"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rb_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize="1.0"
+            style="?android:attr/ratingBarStyleIndicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+            android:layout_marginStart="@dimen/grid_1_half"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"/>
+
+    <View
+            android:id="@+id/view_language"
+            android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:background="@color/lightGray"
+            android:layout_marginTop="@dimen/grid_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_subheader"
+            app:layout_constraintRight_toLeftOf="@id/rb_language"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline12" app:layout_constraintGuide_percent="0.43"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            style="@style/UBButton.Primary"
+            android:text="Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            app:layout_constraintTop_toBottomOf="@+id/rb_language"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

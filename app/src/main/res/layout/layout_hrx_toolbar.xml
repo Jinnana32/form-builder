@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools" app:contentInsetLeft="0dp"
+                                   app:contentInsetStart="0dp"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/s_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hrx_back_btn_32"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="18sp"
+                android:text="Daily Time Record"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/toolbar_back"
+                app:layout_constraintTop_toTopOf="@+id/toolbar_back" app:layout_constraintVertical_bias="0.0"
+                android:layout_marginTop="3dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_sub_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="12sp"
+                android:text="Fill up form"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_tag"
+                app:layout_constraintStart_toStartOf="@+id/toolbar_tag"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

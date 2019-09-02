@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_profile_basic_info"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_circle_heading_basic_info"
+            app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_basic_info">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_edit_basic_information"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/edit"
+                android:paddingRight="@dimen/grid_1"
+                android:paddingLeft="@dimen/grid_1"
+                android:paddingTop="@dimen/grid_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/grid_2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ub_black"
+                        android:textSize="@dimen/text_small_body"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/grid_1_half"
+                        android:textSize="@dimen/text_small"
+                        android:text="Gender"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_gender"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_birthdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ub_black"
+                        android:textSize="@dimen/text_small_body"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_gender"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_birthdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:text="Birthdate"
+                        android:paddingBottom="@dimen/grid_1_half"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_birthdate"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/ub_black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_birthdate"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:text="Nationality"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nationality"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/guideline_basic_info"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ub_black"
+                        android:textSize="@dimen/text_small_body"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:text="Status"
+                        android:paddingBottom="@dimen/grid_1_half"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_status"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_birth_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/ub_black"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toBottomOf="@id/lbl_status"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_birth_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:text="Birthplace"
+                        android:paddingBottom="@dimen/grid_1_half"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_birth_place"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_religion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small_body"
+                        android:textColor="@color/ub_black"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toBottomOf="@id/lbl_birth_place"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lbl_religion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:text="Religion"
+                        app:layout_constraintStart_toStartOf="@id/guideline_basic_info"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_religion"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+            android:id="@+id/edit_profile_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_profile_basic_info"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

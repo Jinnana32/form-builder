@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   app:contentInsetLeft="0dp"
+                                   app:contentInsetStart="0dp"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="70dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:padding="@dimen/s_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_left_black_32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/civ_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Approvals"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/toolbar_back"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_sub_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_daily_subheader"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_body"
+                android:paddingLeft="@dimen/xxl_padding"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_tag"
+                app:layout_constraintLeft_toLeftOf="parent" android:layout_marginLeft="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_approval"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_approvals"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="@+id/iv_right"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_right" android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_right"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logout_v1"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

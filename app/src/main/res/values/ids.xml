@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="separation_taskList_item" type="id"/>
+    <item name="profile_work_certification" type="id"/>
+    <item name="profile_basic_address" type="id"/>
+    <item name="profile_work_education" type="id"/>
+    <item name="profile_work_job_history" type="id"/>
+    <item name="profile_work_skills" type="id"/>
+    <item name="profile_work_language" type="id"/>
+    <item name="profile_personal_family_information" type="id"/>
+    <item name="profile_personal_emergency_contact" type="id"/>
+    <item name="separation_question_item" type="id"/>
+    <item name="separation_request_item" type="id"/>
+    <item name="direct_report_item" type="id" />
+    <item name="dtr_report_item" type="id" />
+    <item name="dtr_dtr_report_item" type="id" />
+    <item name="dtr_change_item" type="id" />
+    <item name="dtr_change_item_request" type="id" />
+    <item name="dtr_break_item" type="id" />
+    <item name="dtr_month_item" type="id" />
+    <item name="promotions_item" type="id" />
+    <item name="work_sched_item" type="id" />
+    <item name="reimbursement_report_item" type="id" />
+    <item name="reg_history_item" type="id" />
+    <item name="payslip_recipient_item" type="id" />
+</resources>

@@ -1,0 +1,699 @@
+<resources>
+    <string name="app_name">hrx-mobility</string>
+
+    <!-- App Strings -->
+    <string name="company_name">Unionbank of the Philippines</string>
+    <string name="nav_apply">Apply for leave</string>
+    <string name="nav_vacancy">Apply for internal vacancy</string>
+    <string name="nav_schedule">Change Working Schedule</string>
+    <string name="nav_timekeeping">Time Keeping</string>
+
+    <string name="finance_header">My Finances</string>
+    <string name="finance_subheader">List of all your financial transactions in one place</string>
+    <string name="finance_avail_product">You can also avail our Unionbank products</string>
+
+    <string name="finance_app_reimbursement">Apply for Reimbursement</string>
+    <string name="finance_view_payslip">View Pay Slip</string>
+    <string name="finance_micro_pension">Micro Pension</string>
+    <string name="finance_credit_card">Apply for Credit Card</string>
+    <string name="finance_loans">Apply for Loans</string>
+
+    <string name="goal_header">My Goals</string>
+    <string name="goal_subheader">List of all your team\'s goal in one place</string>
+
+    <string name="learning_header">My Learning</string>
+    <string name="learning_subheader">List of all your access to knowledge</string>
+
+    <string name="approval_header">My Approvals</string>
+    <string name="approval_subheader">List of all your approval in one place</string>
+
+    <!-- Greetings -->
+    <string name="greeting_home">What do you wanna do today?</string>
+    <string name="greeting_news">Here are the news today.</string>
+
+    <!-- Bottom Bar Menu Title -->
+    <string name="title_home">Home</string>
+    <string name="title_finance">Finance</string>
+    <string name="title_goal">Goal</string>
+    <string name="title_learning">Learning</string>
+    <string name="title_more">More</string>
+    <string name="title_approval">Approval</string>
+
+    <!-- As a line manager -->
+    <string name="line_more_manager">Manage your employees through these links</string>
+
+    <!--FAQs-->
+    <string name="faq_header">FAQs</string>
+    <string name="faq_subheader">List of frequently as questions</string>
+
+
+    <!-- Form Message -->
+    <string name="hint_employee_number">Enter employee username</string>
+    <string name="hint_employee_password">Enter employee password</string>
+    <string name="form_login">Login</string>
+    <string name="form_username">Username</string>
+    <string name="form_password">Password</string>
+    <string name="form_submit">Submit</string>
+    <string name="form_acknowledge">I Acknowledge</string>
+    <string name="form_affirm">I Affirm</string>
+    <string name="form_continue">Continue</string>
+    <string name="form_save">Save</string>
+    <string name="form_cancel">Cancel</string>
+    <string name="form_back">Back</string>
+    <string name="form_edit">Edit</string>
+    <string name="form_delete">Delete</string>
+    <string name="form_add">Add</string>
+    <string name="form_review">Review</string>
+    <string name="form_upload">upload</string>
+    <string name="form_add_custom">Add Custom</string>
+    <string name="form_no_upload">No files uploaded yet.</string>
+    <string name="form_view_more">View More</string>
+    <string name="form_view_okay">Okay</string>
+    <string name="form_having_trouble">Having trouble signing in?</string>
+    <string name="form_summary_message">Please review the information you have selected before submitting the
+        transaction.
+    </string>
+    <string name="form_summary_review">Please review all the information that you\'ve provide</string>
+
+    <!-- Certificate of Employment -->
+
+    <string name="certificate_of_employment_form_header">Certificate of Employment Form</string>
+    <string name="certificate_of_employment_sub_header">Please fill up.</string>
+    <string name='certificate_of_employment_form_type'>Type Of Certificate</string>
+    <string name="certificate_of_employment_form_purpose">Purpose</string>
+    <string name="certificate_of_employment_form_country">Country</string>
+    <string name="goals_priority_title">Goal Priority</string>
+    <string name="goals_priority_message">Please select the level of priority.</string>
+    <string name="dialog_coe_type_title">Type of Certificate</string>
+    <string name="dialog_coe_type_message">Please select your certificate type.</string>
+    <string name="dialog_coe_purpose_title">Purpose</string>
+    <string name="dialog_coe_purpose_message">Select the purpose of your certificate of employment.</string>
+    <string name="dialog_coe_countries_title">Countries</string>
+    <string name="dialog_coe_countries_message">Select the country you\'ve been on your last employment.</string>
+
+    <string name="form_from_date">From Date</string>
+    <string name="form_to_date">To Date</string>
+    <string name="form_reason">Reason</string>
+    <string name="form_remarks">Remarks</string>
+    <string name="form_approved_leaves">Approved Leaves</string>
+
+    <!-- Loading -->
+    <string name="loading">Loading…</string>
+
+    <!-- Error -->
+    <string name="title_error_generic">Error</string>
+    <!-- Error messages -->
+    <string name="error_generic_title">Error</string>
+    <string name="error_generic">It seems we encountered a problem capturing your response. Please try again.</string>
+    <string name="error_network">Please check your internet connection</string>
+    <string name="error_invalid_month">The selected month on "To Date" must be less than or equal to the current date.
+    </string>
+    <string name="error_month_not_selected">Please select a month for "To Date".</string>
+    <string name="error_last_attachment">You cannot remove all attachments</string>
+    <string name="error_image_chooser">There\'s a problem with the image.</string>
+    <string name="error_image_upload_permission">It seems that you didn\'nt allow permission to the 1UHub to access your
+        file storage. Please enable it by going to your Settings > Permissions > and tick on Storage.
+    </string>
+    <string name="error_total_delivery_miscarriage">Total of delivery and miscarriage cannot exceed number of
+        pregnancy.
+    </string>
+    <string name="error_no_image">No selected image.</string>
+    <string name="error_form_procedure_empty">Please select atleast 1 procedure.</string>
+    <string name="error_form_offset_empty">Please select atleast 1 loan to offset.</string>
+    <string name="error_no_webview_content">No Webview content</string>
+    <string name="error_reload">Problem encountered, try to reload again.</string>
+    <string name="error_otp">Incorrect OTP.</string>
+    <string name="error_converting_attachments">Please reattach the documents.</string>
+    <string name="error_null_image">Image cannot found, please reattach the image.</string>
+    <string name="error_large_attachment">Your attachments seems too big, resizing your attachments…</string>
+    <string name="error_submit_form">Failed submitting form</string>
+    <string name="error_session_expired_title">Session Expired</string>
+    <string name="error_session_expired_msg">Your session has been expired, please login again.</string>
+    <string name="error_faq_loading">There\'s problem encountered loading FAQs. Please try again later.</string>
+    <string name="error_profile_loading">Error loading profile, please try to reload again.</string>
+    <string name="error_date">Cannot get date</string>
+    <string name="error_transaction_detail_title">Invalid Transaction</string>
+    <string name="error_transaction_detail_message">Please reload the transaction list and try again.</string>
+    <string name="error_invalid_faq_id">Invalid FAQ, please reload the list.</string>
+    <string name="error_loading_faq_detail">There\'s a problem loading the FAQ. Please try again.</string>
+    <string name="error_feedback">Sorry, we can\'t submit your feedback, please try again later.</string>
+    <string name="error_feedback_category">Sorry, there\'s a problem fetching feedback categories. Please try again
+        later.
+    </string>
+    <string name="error_no_feedback_category_title">Feedback Category</string>
+    <string name="error_no_feedback_category_message">Please choose what category your feedback will be.</string>
+    <string name="error_no_feedback_title">Empty Feedback</string>
+    <string name="error_no_feedback_message">Feedback cannot be empty.</string>
+    <string name="error_no_training_title">Empty Remarks</string>
+    <string name="error_no_training_message">Remarks must not be empty.</string>
+    <string name="error_account_number_title">Invalid Account Number</string>
+    <string name="error_invalid_account_number_message">Please input a valid account number.</string>
+    <string name="error_releasing_center_title">Invalid Releasing Center</string>
+    <string name="error_invalid_releasing_center_message">Please select releasing center.</string>
+    <string name="error_account_number_length">Account number must be 12 digit.</string>
+    <string name="error_no_account_number">Please input a valid account number first.</string>
+    <string name="error_not_valid_mpl">You\'re not valid to avail multi-flightPurpose loan.</string>
+    <string name="error_validate_mpl">There\'s a problem validating your multi-flightPurpose loan request.</string>
+    <string name="error_load_purpose">Failed to load flightPurpose of availments. Please try again.</string>
+    <string name="error_validate_account_number">There\'s a problem validating account number. Please try again.
+    </string>
+    <string name="error_mpl_attachments">Error fetching attachments. Please try again.</string>
+    <string name="error_resend_otp">There\'s a problem resending OTP.</string>
+    <string name="error_amount">Invalid Amount</string>
+    <string name="error_amount_limit_message">This exceeds the benefit limit of %s. Please input another amount.
+    </string>
+    <string name="error_empty_amount">You can\'t leave it 0 or blank.</string>
+    <string name="error_send_feedback">It seems that we\'ve encountered problem upon submitting your feedback. Please
+        try again later.
+    </string>
+    <string name="error_dependents">Sorry, it seems that we\'ve encountered a problem parsing your dependents.</string>
+    <string name="error_premium_payments">Sorry, it seems that we\'ve encountered a problem parsing your payments.
+    </string>
+    <string name="error_branches">Sorry, it seems that we\'ve encountered a problem parsing branches.</string>
+    <string name="error_procedures">Sorry, it seems that we\'ve encountered a problem parsing procedures.</string>
+    <string name="error_agreement">Sorry, it seems that we\'ve encountered a problem upon agreements.</string>
+    <string name="error_rooted_device">Sorry, you cannot use this app on rooted devices.</string>
+    <string name="error_change_auth">It seems that we\'ve encountered a problem switching authentication.</string>
+    <string name="error_init_biometrics">Sorry, it seems there\'s a problem setting up your biometrics. Try again
+        later.
+    </string>
+    <string name="error_grants">Sorry, it seems there\'s a problem parsing grant items.</string>
+    <string name="error_colleges">It seems that we\'ve encountered a problem parsing schools.</string>
+    <string name="error_rating">Sorry, please try rating the book again.</string>
+    <string name="error_loading_podcast">Sorry, it seems that there\'s a problem loading the podcast.</string>
+    <string name="error_podcast_review_message">We\'ve encountered a problem submitting your feedback.</string>
+    <string name="error_permission_storage">It seems that you haven\'t give permission to access your storage.</string>
+    <string name="error_mpl_amount_limit_message">This exceeds your maximum loanable amount of %s. Please input another
+        amount.
+    </string>
+    <string name="error_mpl_validate_title">We’re sorry, but right now, you’re not yet able to avail of this benefit
+        because of your
+    </string>
+    <string name="error_offset_limit_title">Amount Invalid</string>
+    <string name="error_offset_limit_message">We\'re sorry but your selected existing loans have exceeded your new
+        principal amount. These cannot be deducted from your new loan. Kindly select within the appropriate balance.
+    </string>
+    <string name="error_car_lease_not_eligible_title">Not Eligible</string>
+    <string name="error_car_lease_not_eligible_message">Employee is not eligible to avail a car lease</string>
+    <string name="error_onboarding_skills_required_fields">Please fill in the required fields</string>
+    <string name="error_carlease_feedback_title">Sorry</string>
+    <string name="error_carlease_feedback_message">We\'ve encountered a problem submitting your feedback.</string>
+    <string name="error_uploading_attachment_title">Oops</string>
+    <string name="error_uploading_attachment_message">There\'s a problem uploading your attachment.</string>
+    <string name="error_calamity_type">Sorry, it seems that we\'ve encountered a problem parsing the calamity types
+    </string>
+    <string name="error_death_date">Day of Death cannot be future.</string>
+    <string name="error_wake_date">Day of Wake cannot be less than Day of Death.</string>
+    <string name="error_interment_date">Day of Interment cannot be less than Day of Wake.</string>
+    <string name="error_invalid_year_model">Please input a valid year model.</string>
+    <string name="error_invalid_year_model_greater_than_current">Year model cannot be greater than the current year
+    </string>
+    <string name="error_payslip_incorrect_password">Please provide the correct password.</string>
+    <string name="error_invalid_date_span">Sorry, you can only avail for %s days.</string>
+    <string name="error_code_not_matched">5-digit code did not matched. Please re-enter.</string>
+    <string name="error_month_not_valid">Future month is not valid</string>
+    <string name="error_incorrect_otp_title">Incorrect PIN</string>
+    <string name="error_incorrect_otp_message">We\'re sorry but you have entered the wrong PIN multiple times. We\'ve
+        logged you out to secure your account. Please login again after a few minutes.
+    </string>
+    <string name="error_password_not_matched">Password did not matched.</string>
+    <string name="error_description_limit_reached">Profile description must not exceed 150 characters.</string>
+    <string name="error_no_excel_viewer">No application available to view excel. Download an app or download the file
+        and transfer it to a computer.
+    </string>
+
+
+    <!-- Actions -->
+    <string name="action_proceed">Proceed</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="action_next">Next</string>
+    <string name="action_verify">Verify</string>
+    <string name="action_create">Create</string>
+
+    <!-- Validation -->
+    <string name="error_form_input_required">This field is required!</string>
+    <string name="error_min_char">Characters must be atleast %s</string>
+    <string name="error_min_max">Characters must be atleast %s and maximum of %s.</string>
+    <string name="error_min_max_value">The value must not exceed to %s</string>
+    <string name="error_min_value">The value must not be less than %s</string>
+    <string name="error_alphabet">Alphabet is only allowed.</string>
+    <string name="error_alphanumeric">Special characters is not allowed.</string>
+    <string name="error_future_year">Future date is not valid.</string>
+    <string name="error_invalid_year">Please input a valid year</string>
+    <string name="error_from_to_date">"From" date cannot be greater than "To" date</string>
+    <string name="error_should_match">Those password didn\'t match. Try again.</string>
+    <string name="error_password_validation">The password should be at least 8 to 16 characters and contains 1 upper
+        case character and 1 special character.
+    </string>
+    <string name="error_equal_password">Your password didn\'t matched.</string>
+    <string name="error_lower_case">The field should contain a lower case character.</string>
+    <string name="error_upper_case">The field should contain a upper case character.</string>
+    <string name="error_special_case">The field should contain a special case character.</string>
+    <string name="error_numeric_case">The field should contain a numeric case character.</string>
+    <string name="error_email_not_valid">Please enter a valid email address.</string>
+    <string name="error_equal">Your input didn\'t matched.</string>
+
+
+    <!-- Email Registration -->
+    <string name="title_email_registration">Email\nRegistration</string>
+    <string name="message_email_registration">Please provide us your valid email address, which will be used in case you
+        forgot your password and need to reset it.
+    </string>
+    <string name="input_title_email">Email</string>
+    <string name="hint_email">Enter Email</string>
+
+    <!-- Email Verification -->
+    <string name="title_email_verify">Email\nVerification</string>
+    <string name="message_email_verify">Please enter the 6 digit verification code sent to your valid email address.
+    </string>
+    <string name="btn_email_verify_show_pin">Show PIN</string>
+    <string name="btn_email_verify_hide_pin">Hide PIN</string>
+    <string name="btn_email_verify_resend_pin_countdown">Didn\'t receive code? Resend code (in %s sec)</string>
+    <string name="btn_email_verify_resend_pin">Resend PIN</string>
+    <string name="message_email_verify_update_email">I want to update my email</string>
+    <string name="error_resend_pin">Oops, we\'ve encountered a problem resending your PIN. Please try again. %s</string>
+
+    <!-- Setup Password -->
+    <string name="title_password">Setup\nPasscode</string>
+    <string name="message_password">Please nominate a passcode which you will use to login and secure your identity.
+    </string>
+    <string name="input_title_password">Pass Phrase</string>
+    <string name="hint_password">Enter PIN</string>
+    <string name="input_title_confirm_password">Confirm Pass Phrase</string>
+    <string name="hint_confirm_password">Confirm PIN</string>
+    <string name="error_save_password">Oops, we\'ve encountered a problem saving your passcode. Please report this
+        problem immediately. %s
+    </string>
+
+    <!-- Biometrics -->
+    <string name="dialog_title_biometrics">Enable Biometrics</string>
+    <string name="dialog_message_biometrics">Enable your Fingerprint ID for faster login.\nOnce it\'s enabled, anyone
+        with a fingerprint stored on your device will have access to your account.\nYou can turn this feature off in
+        your Mobile App settings anytime.
+    </string>
+
+    <string name="error_title_no_bio_enrolled">No Fingerprint Enrolled</string>
+    <string name="error_message_no_bio_enrolled">Oops, you still haven\'t enrolled any fingerprint on your device.
+        Please enroll your fingerprint on your phone settings.
+    </string>
+
+    <string name="error_title_bio_support">Fingerprint Not Supported</string>
+    <string name="error_message_bio_support">Oops, your phone doesn\'t support fingerprint.</string>
+
+    <string name="error_title_bio_not_enabled">Fingerprint not enabled</string>
+    <string name="error_message_bio_not_enabled">Oops, you still haven\'t enabled your fingerprint settings.</string>
+
+    <string name="error_message_enable_bio">Oops, there\'s a problem encountered upon enabling biometrics. Please try
+        again later.
+    </string>
+
+    <!-- Dialog Messages -->
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_error_title">Sorry</string>
+    <string name="dialog_agree">Agree</string>
+    <string name="dialog_agree_message">Are you sure you want to submit your form?</string>
+    <string name="dialog_disagree">Disagree</string>
+    <string name="dialog_disagree_message">By disagreeing, your application will not proceed. Are you sure you want to
+        cancel?
+    </string>
+    <string name="dialog_success">Success</string>
+    <string name="dialog_success_message">Your application has been routed for your line manager\'s endorsement. Please
+        submit for her/his review the original documents. Please disregard if you filed a Dental LOA. Thank you.
+    </string>
+    <string name="dialog_failed">Failed</string>
+    <string name="dialog_file_attachment_required">File attachment is Required!</string>
+    <string name="dialog_do_you_wish_to_continue">Do you wish to continue?</string>
+    <string name="dialog_failed_message">Your request has been cancelled. You disagreed to the required forms.</string>
+    <string name="dialog_title_mode_of_loan">Mode of Loan</string>
+    <string name="dialog_message_mode_of_loan">Choose your desired mode of loan</string>
+    <string name="dialog_title_term_of_loan">Term of Loan</string>
+    <string name="dialog_message_term_of_loan">Choose your desired term of loan</string>
+    <string name="dialog_procedure_title">Procedures</string>
+    <string name="dialog_procedure_message">Select the types of procedure you want to take</string>
+    <string name="dialog_limit_message">Select the quantity you want to avail</string>
+    <string name="dialog_limit_title">Availment Limit</string>
+    <string name="dialog_availment_title">Availment Type</string>
+    <string name="dialog_availment_message">Select the availment type you want to take</string>
+    <string name="dialog_vaccine_title">Vaccine</string>
+    <string name="dialog_vaccine_message">Select the vaccines you want to avail</string>
+    <string name="dialog_vaccine_availment_message">Please nominate a dependent for vaccination</string>
+    <string name="dialog_offset_title">Offset</string>
+    <string name="dialog_offset_message">Select your offset loans</string>
+    <string name="dialog_recipient_title">Personal/Dependent</string>
+    <string name="dialog_recipient_message">Choose who will avail the benefit</string>
+    <string name="dialog_remove_title">Remove</string>
+    <string name="dialog_remove_message">Are you sure you want to remove this from the list?</string>
+    <string name="dialog_success_feedback_title">Thank you</string>
+    <string name="dialog_success_feedback_message">We\'re happy to hear your feedback!</string>
+    <string name="dialog_branch_title">Healthway Branches</string>
+    <string name="dialog_branch_message">Select your preferred healthway branch</string>
+    <string name="dialog_college_title">Colleges/Universities</string>
+    <string name="dialog_college_message">Choose your college/university</string>
+    <string name="dialog_skill_title">Skill Level</string>
+    <string name="dialog_skill_message">Choose your skill level</string>
+    <string name="dialog_premium_payment_message">Choose the duration of premium payment</string>
+    <string name="dialog_grant_message">Choose the type of grant</string>
+    <string name="dialog_title_return">Return Application Form</string>
+    <string name="dialog_message_return">Please select your reason for returning this application</string>
+    <string name="dialog_account_number_title">UnionBank Account Enrollment</string>
+    <string name="dialog_account_number_message">All benefit requests and claims will be credited to this account.
+        Payroll accounts will not be accepted.
+    </string>
+    <string name="dialog_no_recipient_message">Please select a recipient first.</string>
+    <string name="dialog_no_recipient_title">Invalid Recipient</string>
+    <string name="dialog_news_redirect_title">Redirect</string>
+    <string name="dialog_news_redirect_message">Open the news on browser?</string>
+    <string name="dialog_others_input_title">Others</string>
+    <string name="dialog_others_input_message">Please specify.</string>
+    <string name="dialog_others_input_hint">Please specify</string>
+    <string name="dialog_reset_otp_title">Reset OTP Request</string>
+    <string name="dialog_reset_otp_message">You\'ve successfully requested reset for OTP retries. Please check your
+        email to verify it.
+    </string>
+    <string name="rds_dialog_title">Releasing Centers</string>
+    <string name="rds_dialog_message">Please select the center where the Manager\'s Check will be issued.</string>
+    <string name="dialog_car_lease_attachment_title">Confirmation</string>
+    <string name="dialog_car_lease_attachment_message">Are you sure you want to add another attachment.</string>
+    <string name="dialog_car_confirmation_title">Confirmation</string>
+    <string name="dialog_car_confirmation_message">Are you sure you\'ve already received the car?</string>
+    <string name="dialog_enrollment_confirmation_message">Are you sure you want to enroll to this class?</string>
+    <string name="dialog_maternity_requirement_title">Maternity Requirements</string>
+    <string name="dialog_maternity_requirement_message">We’d like to help you in your labor expenses but this benefit
+        requires post-submission of multiple documents. Would you like to proceed?
+    </string>
+    <string name="dialog_status_title">Status</string>
+    <string name="dialog_status_message">Please select a status</string>
+    <string name="dialog_relationship_title">Relationship</string>
+    <string name="dialog_relationship_message">Please select a relationship</string>
+    <string name="dialog_loading_message">Loading…</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Work Schedule -->
+    <string name="work_header">Working Schedule</string>
+    <string name="work_header_change">Changing Working Schedule</string>
+    <string name="work_current_sched">Current Work Schedule</string>
+    <string name="work_requested_sched">Requested Work Schedule</string>
+    <string name="work_request_change">Request Change in Working Schedule</string>
+
+    <string name="work_cws_sched">Schedule</string>
+    <string name="work_cws_shift_type">Shift Type</string>
+    <string name="work_cws_eff_date">Effective Date</string>
+    <string name="work_cws_remarks">Remarks</string>
+    <string name="work_cws_status">Status</string>
+
+    <string name="work_empty_list_title">This list feels empty</string>
+    <string name="work_empty_list_message">You can request a change for work schedule by tapping the button below
+    </string>
+
+    <string name="work_choose_sched">Choose Schedule</string>
+    <string name="work_choose_shift">Choose Shift</string>
+    <string name="work_effective_date">Effective Date</string>
+    <string name="work_remarks">Remarks/Reason</string>
+    <string name="work_submit_request">Submit Request</string>
+
+    <string name="work_success_prompt">Your request for change in working schedule has been submitted. Kindly wait for
+        your line manager\'s approval and for further discussions. Thank you!
+    </string>
+    <string name="work_error_prompt">There must be something wrong in the request that you\'ve submitted. Kindly try
+        again. Thank you!
+    </string>
+
+    <!-- Payslip -->
+
+    <string name="pay_subheader">View and send your payroll via email anytime, anywhere</string>
+    <string name="pay_change_date">Change Date</string>
+    <string name="pay_head_earning">Earnings</string>
+    <string name="pay_deductions">Deductions</string>
+    <string name="pay_generate">Generate PDF and send to my email</string>
+
+    <string name="pay_cut_off">Select Cut off</string>
+
+    <string name="pay_email">Company Email Address</string>
+    <string name="pay_recipient">Other Recipients</string>
+
+    <string name="pay_send_payslip">Send Payslip</string>
+    <string name="pay_manage_recipient">Manage Recipient</string>
+    <string name="pay_sub_header">Here\'s a list of people that you may send your payslip to.</string>
+
+    <string name="pay_tab_favorites">Favorites</string>
+    <string name="pay_tab_recipients">My Recipients</string>
+
+    <string name="pay_manage_header">Add Recipients</string>
+    <string name="pay_manage_edit_header">Edit Recipient</string>
+    <string name="pay_manage_subheader">Fill up the form for your selected recipient</string>
+    <string name="pay_manage_name">Full Name</string>
+    <string name="pay_manage_email">Email Address</string>
+    <string name="pay_manage_favorite">Save as your favorite</string>
+
+    <!-- Expense Reimbursement -->
+    <string name="expense_header">Expense Reimbursement</string>
+    <string name="expense_subheader">Fill up this form to file a reimbursement</string>
+
+    <string name="expense_type">Expense Reimbursement Type</string>
+    <string name="expense_receipt">Official Receipt Number</string>
+    <string name="expense_date">Date of Official Receipt</string>
+    <string name="expense_amount">Amount</string>
+    <string name="expense_currency">Currency</string>
+    <string name="expense_upload">Upload supporting documents</string>
+    <string name="expense_support_docs">Supporting Documents(s)</string>
+
+    <!-- Time Keeping -->
+    <string name="time_btn_in">Time in</string>
+    <string name="time_btn_out">Time out</string>
+    <string name="time_title">Would you like to update your daily time record?</string>
+    <string name="time_proceed">Proceed</string>
+    <string name="time_send_changes">Send Changes in DTR</string>
+    <string name="time_check_record">View My DTR</string>
+    <string name="time_work_sched">Change Working Schedule</string>
+    <string name="time_save_edit">Save DTR</string>
+    <string name="time_daily_record">Daily Time Record</string>
+    <string name="time_daily_subheader">Check and manage your DTR here</string>
+    <string name="time_your_on_time">You\'re on time!</string>
+    <string name="time_your_on_time_description">You checked in on time today! Good job, have a productive day ahead!
+    </string>
+
+    <string name="time_edit_header">Edit DTR</string>
+    <string name="time_edit_subheader">You can edit your dtr here.</string>
+
+    <string name="time_original_header">ORIGINAL</string>
+    <string name="time_change_header">PROPOSED CHANGE</string>
+
+    <!-- Regularization -->
+    <string name="reg_tab_pending">Pending</string>
+    <string name="reg_tab_history">History</string>
+    <string name="reg_header">Regularization</string>
+    <string name="reg_sub_header">Initiate regularization to a worthy employee</string>
+    <string name="reg_search_hint">Search Employee\'s Name</string>
+    <string name="reg_initiate">Initiate Regularization</string>
+    <string name="reg_cancel">Cancel Regularization</string>
+    <string name="reg_view_progress">View Progress</string>
+    <string name="reg_process_sub_header">Regularization Process</string>
+    <string name="reg_task_sub_header">Regularization Tasks</string>
+
+    <string name="reg_dialog_header">All Aboard!</string>
+    <string name="reg_dialog_subheader">Congratulations for adding a new regular member on your team! Please provide a
+        rating and comment about the employees performance. You may check on their progress on the history tab
+    </string>
+    <string name="reg_position">Position:</string>
+    <string name="reg_start_date">Start Date:</string>
+    <string name="reg_department">Department:</string>
+    <string name="reg_remarks">Add Comments/Remarks</string>
+    <string name="reg_rate_employee">Rate this employee</string>
+    <string name="reg_remarks_hint">Insert text here</string>
+    <string name="reg_history_task">Task: ID Requirements</string>
+
+    <string name="reg_id_sss">Social Security System</string>
+    <string name="reg_id_philhealth">Philhealth</string>
+    <string name="reg_id_tin">Tax Identification</string>
+    <string name="reg_id_pagibig">Pag-Ibig</string>
+    <string name="reg_id_umid">Unified Multi-purpose</string>
+    <string name="reg_id_drivers">Driver\'s License</string>
+
+    <!-- Approval Messages -->
+    <string name="approval_leave">Leave</string>
+    <string name="approval_worksched">Worksched</string>
+    <string name="approval_dtr">DTR</string>
+    <string name="approval_separation">Separation</string>
+    <string name="approval_transfer">Transfer</string>
+    <string name="approval_promotion">Promotion</string>
+    <string name="approval_regularization">Regularization</string>
+
+    <!--Separation-->
+    <string name="separation_apply_header">Separation</string>
+    <string name="separation_survey_header">Off-Boarding Survey</string>
+    <string name="separation_clearance_header">Clearance Checklist</string>
+    <string name="separation_approvals_header">Approve Separation</string>
+    <string name="separation_apply_subheader">Please think before fill up the form</string>
+    <string name="separation_survey_subheader">Please take some time to provide feedback about your stay</string>
+    <string name="separation_clearance_subheader">Please complete this checklist before proceed.</string>
+    <string name="separation_menu_subheader">Separation request approved.</string>
+    <string name="separation_offboarding_subheader">Off Boarding Process</string>
+    <string name="separation_approvals_subheader">List of pending separation requests.</string>
+    <string name="separation_upload_header">Upload your resignation letter</string>
+    <string name="separation_upload_subheader">No files uploaded yet</string>
+    <string name="separation_upload_button">Upload</string>
+    <string name="separation_retiring_header">Are you retiring this year?</string>
+    <string name="separation_effectivity">When is the effectivity of your resignation?</string>
+    <string name="separation_menu_retire">Retiree?</string>
+    <string name="separation_menu_effectivity">Effectivity Date</string>
+    <string name="separation_menu_resignation">Resignation Letter</string>
+    <string name="separation_menu_offboarding">Off-Boarding Survey</string>
+    <string name="separation_menu_task">Task Checklist</string>
+    <string name="separation_hint_remarks">Reason for separation</string>
+
+    <string name="separation_goto_survey_btn">Proceed to Off-Boarding Survey</string>
+    <string name="separation_view_btn">View</string>
+    <string name="separation_take_survey">Take Survey</string>
+
+    <string name="question1">How was your experience in the company?</string>
+    <string name="radio1">Exemplary</string>
+    <string name="radio2">Satisfactory</string>
+    <string name="radio3">Unsatisfactory</string>
+    <string name="question2">Is there anything that we can improve on as a company?</string>
+    <string name="question3">Do you have any other comments/suggestions?</string>
+    <string name="question4">Would you recommend your family/friendsto work with us?</string>
+    <string name="radio_yes">Yes</string>
+    <string name="radio_no">No</string>
+
+
+    <string name="separation_et_survey">Insert Text Here</string>
+
+    <string name="separation_survey_submit">Submit</string>
+    <string name="separation_survey_cancel">Cancel</string>
+
+    <string name="separation_clearance_property">Company Property</string>
+    <string name="separation_clearance_turnover">Team Turnover</string>
+    <string name="cl_1">Surrender company ID</string>
+    <string name="cl_2">Surrender laptop</string>
+    <string name="cl_3">Surrender uniform</string>
+    <string name="cl_4">Documentation</string>
+    <string name="cl_5">Team Clearance</string>
+    <string name="separation_checklist_submit">Submit Checklist</string>
+
+    <string name="separation_checklist_done">Done!</string>
+
+    <!--LeaveManagement-->
+    <string name="leave_form_header">My Leaves</string>
+    <string name="leave_form_subheader">Filing for a leave has never been this convenient</string>
+    <string name="leave_form_subheader1">daer been this convenient</string>
+    <string name="leave_form_desc">Let me know more about the leave that you want to avail</string>
+    <string name="leave_types_of_leave">Type of Leave</string>
+    <string name="leave_leave_duratation">How long will the duration be?</string>
+    <string name="leave_remarks">Remarks/Reason</string>
+    <string name="leave_startTimeAndEndTime">Start Time and End Time</string>
+    <string name="leave_approveleave">Approve Leave</string>
+    <string name="form_upload_text">Upload Supporting documents</string>
+    <string name="leave_duration">Leave Duration</string>
+    <string name="remaining_leaves">Remaining Leaves</string>
+    <string name="leave_status_label">Status</string>
+    <string name="approve">Approve</string>
+    <string name="decline">Decline</string>
+    <string name="from">From (AM)</string>
+    <string name="to">To (PM)</string>
+    <string name="leave_type_title">Type of Leave</string>
+    <string name="leave_type_message">Please select your leave type</string>
+    <string name="leave_approval_april_2018">April 2018</string>
+    <string name="leave_approval_monday">Monday</string>
+    <string name="leave_approval_pending">Pending</string>
+    <string name="leave_approval_15">15</string>
+    <string name="leave_approval_jamyla_dela_cruz">Jamyla Dela Cruz</string>
+    <string name="leave_approval_vacation_leave">Vacation Leave</string>
+    <string name="leave_approval_6">6</string>
+    <string name="leave_no_file_uploaded">No File Uploaded</string>
+    <string name="leave_to">to</string>
+    <string name="leave_0_1000">0/500</string>
+    <string name="imageView_tag">TODO</string>
+    <string name="charCount_concat"></string>
+
+
+    <!--profile-->
+    <string name="language_skills">Language &amp; Skills</string>
+    <string name="language_mastery_level">Language &amp; Mastery Level</string>
+    <string name="skills_mastery_level">Skills &amp; Mastery Level</string>
+    <string name="language_form_header">Language Form</string>
+    <string name="language_form_subheader">Filling your language form has never this convenient.</string>
+    <string name="skill_form_header">Skill Form</string>
+    <string name="skill_form_subheader">Filling your skill form has never this convenient.</string>
+
+    <string-array name="salutation">
+        <item>Miss</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+    </string-array>
+
+    <!--dropdown-->
+    <string name="dialog_skill_type_title">Skills</string>
+    <string name="dialog_skill_type_message">Please select your skill.</string>
+    <string name="dialog_language_type_title">Languages</string>
+    <string name="dialog_language_type_message">Please select your language.</string>
+    <string name="dialog_salutation_type_title">Salutation</string>
+    <string name="dialog_salutation_type_message">Please select your salutation type.</string>
+    <string name="dialog_gender_type_title">Gender</string>
+    <string name="dialog_gender_type_message">Please select your gender type.</string>
+    <string name="dialog_civil_status_type_title">Civil Status</string>
+    <string name="dialog_civil_status_type_message">Please select your civil status type.</string>
+    <string name="dialog_citizenship_type_title">Citizenship</string>
+    <string name="dialog_citizenship_type_message">Please select your citizenship type.</string>
+    <string name="dialog_religion_type_title">Religion</string>
+    <string name="dialog_religion_type_message">Please select your Religion type.</string>
+    <string name="dialog_address_type_title">Type of Address</string>
+    <string name="dialog_address_type_message">Please select your address type.</string>
+    <string name="dialog_country_type_title">Country</string>
+    <string name="dialog_country_type_message">Please select your country.</string>
+    <string name="dialog_province_type_title">Province</string>
+    <string name="dialog_province_type_message">Please select your province.</string>
+    <string name="dialog_city_type_title">City/Municipality</string>
+    <string name="dialog_city_type_message">Please select your City.</string>
+    <string name="dialog_resident_type_title">Residence Type</string>
+    <string name="dialog_resident_type_message">Please select your residence type.</string>
+    <string name="dialog_school_name_type_title">Name of School</string>
+    <string name="dialog_school_name_type_message">Please select your school.</string>
+    <string name="dialog_school_degree_type_title">School Degree</string>
+    <string name="dialog_school_degree_type_message">Please select your degree.</string>
+    <string name="dialog_major_type_title">Major/Program</string>
+    <string name="dialog_major_type_message">Please select your major.</string>
+    <string name="dialog_field_of_study_type_title">Field of Study</string>
+    <string name="dialog_field_of_study_type_message">Please select your field of study.</string>
+    <string name="dialog_industry_type_title">Industry</string>
+    <string name="dialog_industry_type_message">Please select your industry.</string>
+    <string name="dialog_certification_type_title">Type of Certification</string>
+    <string name="dialog_certification_type_message">Please select your certification type.</string>
+    <string name="dialog_relationship_type_title">Relationship</string>
+    <string name="dialog_relationship_type_message">Please select your Relationship.</string>
+
+    <!--Approval String-->
+    <string name="approvalAll">All</string>
+    <string name="approvalExpense">Expense</string>
+
+    <!--DTR String-->
+    <string name="dtr_update_request">DTR update request</string>
+
+    <string name="payslip_frederex_potolin">Frederex Potolin</string>
+    <string name="payslip_payroll_card">Payroll card</string>
+    <string name="payslip_account_balance">Account balance</string>
+    <string name="payslip_150_000_00">150,000.00</string>
+    <string name="payslip_3223">**** **** **** 3223</string>
+    <string name="payslip_basic_pay">Basic Pay</string>
+    <string name="payslip_overtime_pay">Overtime Pay</string>
+    <string name="payslip_meal_transportation_allowance">Meal/Transportation Allowance</string>
+    <string name="payslip_night_premium">Night Premium</string>
+    <string name="payslip_gross_pay">Gross Pay</string>
+    <string name="payslip_withholding_tax">Withholding Tax</string>
+    <string name="payslip_leave_withou_pay">Leave withou pay</string>
+    <string name="payslip_tardy_undertime">Tardy/Undertime</string>
+    <string name="payslip_sub_total">Sub total</string>
+    <string name="payslip_net_pay">Net Pay</string>
+    <string name="payslip_15_000">15, 000</string>
+    <string name="payslip_2_000">2,000</string>
+    <string name="payslip_400">400</string>
+    <string name="payslip_1_000">1,000</string>
+    <string name="payslip_10_000">10, 000</string>
+
+</resources>

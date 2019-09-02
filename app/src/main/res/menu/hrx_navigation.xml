@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/hrx_home_grey"
+            android:title="@string/title_home"
+    />
+
+    <item
+            android:id="@+id/nav_finance"
+            android:icon="@drawable/hrx_finance_grey"
+            android:title="@string/title_finance" />
+
+    <item
+            android:id="@+id/nav_goal"
+            android:icon="@drawable/hrx_goal_grey"
+            android:title="@string/title_goal" />
+
+    <item
+            android:id="@+id/nav_learnings"
+            android:icon="@drawable/hrx_learning_grey"
+            android:title="@string/title_learning" />
+
+
+    <item
+            android:id="@+id/nav_more"
+            android:icon="@drawable/hrx_more_grey"
+            android:title="@string/title_more" />
+
+</menu>

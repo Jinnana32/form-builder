@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/button_action_cancel_disabled_fill" android:state_enabled="false"/>
+    <item android:drawable="@drawable/button_action_cancel_normal_fill" android:state_pressed="false"/>
+    <item android:drawable="@drawable/button_action_cancel_pressed_fill" android:state_pressed="true"/>
+</selector>

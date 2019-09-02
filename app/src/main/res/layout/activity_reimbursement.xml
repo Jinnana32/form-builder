@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sv_reimbursement_form"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/m_padding"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding"
+    >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_type"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/hrx_field_header"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                android:id="@+id/layout_expense_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                app:layout_constraintTop_toBottomOf="@+id/layout_full_name">
+
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:id="@+id/et_expense_type"
+                    style="?ubEditTextDropdownStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_type"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/l_padding">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_receipt"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/hrx_field_header"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditTextLayout
+                android:id="@+id/layout_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/s_padding"
+                app:layout_constraintTop_toBottomOf="@+id/layout_email">
+
+            <com.itsgmobility.hrbenefits.ui.UBEditText
+                    android:id="@+id/et_expense_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </com.itsgmobility.hrbenefits.ui.UBEditTextLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_receipt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/l_padding">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"
+                    android:paddingEnd="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_date"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/hrx_field_header"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <CalendarView
+                android:id="@+id/expense_date"
+                android:background="@drawable/ub_edit_text_bg"
+                android:layout_marginLeft="@dimen/s_padding"
+                android:layout_marginRight="@dimen/s_padding"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                app:layout_constraintTop_toBottomOf="@+id/layout_favorite"
+                app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/expense_date"
+                app:layout_constraintStart_toStartOf="@+id/layout_favorite"
+                android:layout_marginTop="@dimen/l_padding">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_amount"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_expense_amount"
+                style="@style/UBEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_amount"
+                app:layout_constraintStart_toStartOf="@+id/layout_expense_amount" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_amount"
+                app:layout_constraintStart_toStartOf="@+id/guideline10">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_currency"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBEditText
+                android:id="@+id/et_expense_currency"
+                style="@style/UBEditTextDropdown"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_amount"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/et_expense_amount"
+                app:layout_constraintStart_toStartOf="@+id/layout_favorite"
+                android:layout_marginTop="@dimen/l_padding">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_upload"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small_body"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.itsgmobility.hrbenefits.ui.UBButton
+                android:id="@+id/btn_expense_upload"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="?ubButtonSmallStyle"
+                android:text="@string/form_add"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_upload"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="58dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/ic_add_green_500_24dp"
+                android:drawableEnd="@drawable/ic_add_green_500_24dp"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_expense_attachements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/btn_expense_upload" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="16dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/btn_expense_upload" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hrx_empty_list_medium"
+                    android:layout_marginTop="@dimen/lbl_margin_transaction"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_empty_list_title"
+                    android:layout_marginTop="@dimen/s_padding"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:text="@string/work_empty_list_message"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginTop="@dimen/s_padding"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline10"
+                app:layout_constraintGuide_percent="0.50"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
+

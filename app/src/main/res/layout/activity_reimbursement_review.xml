@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent">
+
+<androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <include
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingTop="@dimen/l_padding"
+            android:paddingLeft="@dimen/m_padding"
+            android:paddingRight="@dimen/m_padding"
+    >
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_back"
+                android:clickable="true"
+                android:layout_width="8dp"
+                android:layout_height="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hrx_back"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_separation_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense_header"
+                android:layout_marginLeft="@dimen/grid_2"
+                android:textColor="@color/ub_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_headline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ic_back"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_separation_subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_1"
+                android:text="@string/form_summary_review"
+                android:textStyle="bold"
+                android:textColor="@color/ub_black"
+                android:textSize="@dimen/text_small_body"
+                app:layout_constraintTop_toBottomOf="@+id/tv_separation_header"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_separation_subheader"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/l_padding">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_type"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_type"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_receipt"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_receipt"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_date"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_expense_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layout_expense_date"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                app:srcCompat="@drawable/ic_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:layout_marginBottom="@dimen/s_padding"
+                android:text="@string/expense_amount"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/snackbar_color"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_expense_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expense_amount"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="@string/expense_support_docs"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/snackbar_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expense_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_type"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expense_receipt_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_receipt"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expense_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_date"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expense_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_amount"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expense_support_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_expense_support"
+        />
+
+
+        <com.itsgmobility.hrbenefits.ui.UBButton
+                android:id="@+id/btn_save_manage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/UBButton.Primary"
+                android:text="@string/form_submit"
+                android:layout_marginTop="@dimen/materialize_toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expense_support_text"
+                app:layout_constraintRight_toRightOf="@+id/guideline10"
+                android:layout_marginRight="@dimen/s_padding"
+                app:layout_constraintHorizontal_bias="1.0" android:layout_marginLeft="24dp"/>
+
+        <com.itsgmobility.hrbenefits.ui.UBButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/UBButton"
+                android:text="@string/form_back"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_save_manage"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline10"
+                android:layout_marginLeft="@dimen/s_padding"
+                android:layout_marginRight="24dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline10"
+                app:layout_constraintGuide_percent="0.50"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
+

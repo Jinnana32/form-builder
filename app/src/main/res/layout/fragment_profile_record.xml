@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!--payroll information-->
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_circle_heading_government_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    app:srcCompat="@drawable/ic_circle"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xs_padding"
+                    android:layout_marginBottom="@dimen/s_padding"
+                    android:text="Government ID"
+                    android:textColor="@color/ub_black"
+                    android:textSize="@dimen/text_body"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_government_info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_circle_heading_government_id"
+                app:layout_constraintTop_toBottomOf="@+id/layout_circle_heading_government_id">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_government_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                <include
+                        android:id="@+id/item_records_tin_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/item_profile_view_record_tin_number"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <include
+                        android:id="@+id/item_records_sss_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_sss_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_tin_number"/>
+
+                <include
+                        android:id="@+id/item_records_pagibig_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_pagibig_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_sss_number"/>
+
+                <include
+                        android:id="@+id/item_records_phic_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_phic_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_pagibig_number"/>
+
+                <include
+                        android:id="@+id/item_records_gsis_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_gsis_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_phic_number"/>
+
+                <include
+                        android:id="@+id/item_records_drivers_license"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_drivers_license"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_gsis_number"/>
+
+                <include
+                        android:id="@+id/item_records_national_id_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_national_id_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_drivers_license"/>
+
+                <include
+                        android:id="@+id/item_records_pwd_id_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_pwd_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_national_id_number"/>
+
+                <include
+                        android:id="@+id/item_records_umid_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_umid_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_pwd_id_number"/>
+
+                <include
+                        android:id="@+id/item_records_passport_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        layout="@layout/item_profile_view_record_passport_number"
+                        app:layout_constraintTop_toBottomOf="@id/item_records_umid_number"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
