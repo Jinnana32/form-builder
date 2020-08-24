@@ -1,7 +1,7 @@
 <h1>Form builder</h1>
 
 <h2>Description</h2>
-<p></p>
+<p>A simple dynamic form handler</p>
 
 <h2>Dependencies</h2>
 <ul>
