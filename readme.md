@@ -1,4 +1,4 @@
-<h1>Project HRX</h1>
+<h1>Form builder</h1>
 
 <h2>Description</h2>
 <p></p>
